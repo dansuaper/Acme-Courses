@@ -20,6 +20,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.daniel-favourite-link" action="http://www.twitter.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.raul-favourite-link" action="http://www.twitch.com/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
