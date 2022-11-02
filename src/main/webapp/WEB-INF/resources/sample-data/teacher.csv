@@ -1,0 +1,4 @@
+key,organisation,assertion,info,key:userAccount
+teacher-01,Acme Inc.,Assertion teacher-01,http://example.com,user-account-teacher-01
+teacher-02,Acme Inc.,Assertion teacher-02,null,user-account-teacher-02
+teacher-03,Acme Inc.,Assertion teacher-03,http://example.com,user-account-teacher-03
