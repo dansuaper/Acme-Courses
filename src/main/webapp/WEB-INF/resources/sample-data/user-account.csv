@@ -1,7 +1,7 @@
 key,enabled,identity,password,username
-user-account-chef-01,true,"UserIdentity{name:'Chef1', surname:'Acme', email:'chef1@acme.com'}",chef1,chef1
-user-account-chef-02,true,"UserIdentity{name:'Chef2', surname:'Acme', email:'chef2@acme.com'}",chef2,chef2
-user-account-chef-03,true,"UserIdentity{name:'Chef3', surname:'Acme', email:'chef3@acme.com'}",chef3,chef3
-user-account-epicure-01,true,"UserIdentity{name:'Epicure1', surname:'Acme', email:'epicure1@acme.com'}",epicure1,epicure1
-user-account-epicure-02,true,"UserIdentity{name:'Epicure2', surname:'Acme', email:'epicure2@acme.com'}",epicure2,epicure2
-user-account-epicure-03,true,"UserIdentity{name:'Epicure3', surname:'Acme', email:'epicure3@acme.com'}",epicure3,epicure3
+user-account-teacher-01,true,"UserIdentity{name:'Teacher1', surname:'Acme', email:'teacher1@acme.com'}",teacher1,teacher1
+user-account-teacher-02,true,"UserIdentity{name:'Teacher2', surname:'Acme', email:'teacher2@acme.com'}",teacher2,teacher2
+user-account-teacher-03,true,"UserIdentity{name:'Teacher3', surname:'Acme', email:'teacher3@acme.com'}",teacher3,teacher3
+user-account-learner-01,true,"UserIdentity{name:'Learner1', surname:'Acme', email:'learner1@acme.com'}",learner1,learner1
+user-account-learner-02,true,"UserIdentity{name:'Learner2', surname:'Acme', email:'learner2@acme.com'}",learner2,learner2
+user-account-learner-03,true,"UserIdentity{name:'Learner3', surname:'Acme', email:'learner3@acme.com'}",learner3,learner3
