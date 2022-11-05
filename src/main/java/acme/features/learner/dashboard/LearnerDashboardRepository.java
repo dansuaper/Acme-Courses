@@ -14,21 +14,18 @@ public interface LearnerDashboardRepository extends AbstractRepository{
 	
 	//Help Requests
 	@Query("SELECT h.status, count(h) FROM HelpRequest h GROUP BY h.status")
-	Collection<Tuple> totalNumberOfHeLpRequestsByStatus();
+	Collection<Tuple> totalNumberOfHelpRequestsByStatus();
 
 	@Query("SELECT h.status, h.budget.currency, avg(h.budget.amount) FROM HelpRequest h GROUP BY h.status")
-	Collection<Tuple> averageBudgetOfHeLpRequestsByStatus();
+	Collection<Tuple> averageBudgetOfHelpRequestsByStatus();
 
 	@Query("SELECT h.status, h.budget.currency, stddev(h.budget.amount) FROM HelpRequest h GROUP BY h.status")
-	Collection<Tuple> deviationBudgetOfHeLpRequestsByStatus();
+	Collection<Tuple> deviationBudgetOfHelpRequestsByStatus();
 
 	@Query("SELECT h.status, h.budget.currency, min(h.budget.amount) FROM HelpRequest h GROUP BY h.status")
-	Collection<Tuple> minimumBudgetOfHeLpRequestsByStatus();
+	Collection<Tuple> minimumBudgetOfHelpRequestsByStatus();
 
 	@Query("SELECT h.status, h.budget.currency, max(h.budget.amount) FROM HelpRequest h GROUP BY h.status")
-	Collection<Tuple> maximumBudgetOfHeLpRequestsByStatus();
-	
-	//SystemConfiguration
-//	@Query("SELECT s.acceptedCurrencies FROM SystemConfiguration s")
-//	String findSystemCurrencies();
+	Collection<Tuple> maximumBudgetOfHelpRequestsByStatus();
+
 }
