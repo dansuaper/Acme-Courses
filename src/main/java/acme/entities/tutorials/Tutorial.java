@@ -51,6 +51,7 @@ public class Tutorial extends AbstractEntity {
 	@URL
 	protected String info;
 	
+	@NotBlank
 	protected String timeUnit;
 	
 	protected boolean published;
