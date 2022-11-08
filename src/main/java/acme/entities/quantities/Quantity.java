@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import acme.entities.courses.Course;
@@ -24,8 +25,9 @@ public class Quantity extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	
 	@Min(value = 1)
-	protected Double quantity;
+	protected Double amount;
 	
+	@NotBlank
 	protected String timeUnit;
 	
 	// Relationships ----------------------------------------------------------

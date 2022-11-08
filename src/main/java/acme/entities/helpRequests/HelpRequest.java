@@ -9,7 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -35,6 +34,7 @@ public class HelpRequest extends AbstractEntity{
 
 	protected HelpRequestStatus status;
 	
+	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(:[A-Z]{1,10})?$") 
 	protected String ticker;
@@ -43,7 +43,8 @@ public class HelpRequest extends AbstractEntity{
 	@Length(min=1, max=255)
 	protected String statement;
 	
-	@Positive
+	@Valid
+	@NotNull
 	protected Money budget;
 	
 	protected Date startDate;
@@ -60,11 +61,11 @@ public class HelpRequest extends AbstractEntity{
 	@NotNull
 	@Valid
 	@ManyToOne(optional=false)
-	protected Learner learner;
+	protected Teacher teacher;
 	
 	@NotNull
 	@Valid
 	@ManyToOne(optional=false)
-	protected Teacher teacher;
+	protected Learner learner;
 	
 }

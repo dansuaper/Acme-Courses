@@ -1,0 +1,21 @@
+key,published,title,ticker,abstract-text,cost,info,type,key:teacher
+tutorial-01,true,Maths,AAA-001,This is a theory tutorial,EUR 10,null,THEORY,teacher-01
+tutorial-02,true,Science,AAA-002:A,This is a theory tutorial,EUR 20,null,THEORY,teacher-02
+tutorial-03,true,A,AAA-003:AB,Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Donec quam felis ultricies nec pellentesque eu pretium quis,USD 15,http://example.com,THEORY,teacher-03
+tutorial-04,true,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-004:ABC,This is a theory tutorial,USD 30,null,THEORY,teacher-01
+tutorial-05,true,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-005:ABCDEFGHIJ,Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Donec quam felis ultricies nec pellentesque eu pretium quis,GBP 20.5,http://example.com,THEORY,teacher-02
+tutorial-06,false,Matemáticas,AAA-006:AA,This is a theory tutorial,EUR 10,http://example.com,THEORY,teacher-03
+tutorial-07,false,Ciencias,AAA-007,A,USD 200,null,THEORY,teacher-01
+tutorial-08,false,A,AAA-008:A,This is a theory tutorial,USD 5000,http://example.com,THEORY,teacher-02
+tutorial-09,false,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-009,This is a theory tutorial,GBP 200.50,null,THEORY,teacher-03
+tutorial-10,false,History,AAA-010:A,This is a theory tutorial,GBP 4000,http://example.com,THEORY,teacher-01
+tutorial-11,true,Maths,AAA-011:B,This is a lab tutorial,EUR 30.0,null,LAB,teacher-01
+tutorial-12,true,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-002:BB,This is a lab tutorial,EUR 8.00,http://example.com,LAB,teacher-02
+tutorial-13,true,A,AAA-003:BC,This is a lab tutorial,USD 12.10,null,LAB,teacher-03
+tutorial-14,true,Science,AAA-004:BASAFAFSFD,A,USD 20.00,null,LAB,teacher-01
+tutorial-15,true,Historia,AAA-005:BAAGDSAF,Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Donec quam felis ultricies nec pellentesque eu pretium quis,GBP 4,http://example.com,LAB,teacher-02
+tutorial-16,false,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-006,This is a lab tutorial,EUR 40.99,http://example.com,LAB,teacher-03
+tutorial-17,false,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,AAA-007:B,Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Donec quam felis ultricies nec pellentesque eu pretium quis,USD 12.9,null,LAB,teacher-01
+tutorial-18,false,Matemáticas,AAA-008:B,This is a lab tutorial,GBP 300,null,LAB,teacher-02
+tutorial-19,false,Ciencias,AAA-009:C,This is a lab tutorial,GBP 10000000,http://example.com,LAB,teacher-03
+tutorial-20,false,A,AAA-010,Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Donec quam felis ultricies nec pellentesque eu pretium quis,GBP 0.01,null,LAB,teacher-01
