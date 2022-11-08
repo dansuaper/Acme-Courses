@@ -31,6 +31,7 @@ public class Course extends AbstractEntity {
 
 	protected boolean published;
 	
+	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(:[A-Z]{1,10})?$") 
 	protected String ticker;
@@ -48,7 +49,7 @@ public class Course extends AbstractEntity {
 	
 	@Valid
 	@Transient
-	protected Money retailPrice;
+	protected Money cost;
 	
 	// Derived attributes -----------------------------------------------------
 	
