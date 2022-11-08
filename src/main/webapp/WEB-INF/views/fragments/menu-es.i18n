@@ -30,15 +30,10 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 
-# master.menu.provider ########################################################
+# master.menu.any #############################################################
 
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.any = Cualquiera
+master.menu.any.user-accounts = Cuentas de Usuario
 
 # master.menu.user-account ####################################################
 
