@@ -51,6 +51,7 @@ master.menu.teacher.tutorials = Tutoriales
 
 master.menu.learner = Aprendiz
 master.menu.learner.help-requests = Solicitudes de Ayuda
+master.menu.learner.learner-dashboard = Panel de Aprendiz
 
 # master.menu.user-account ####################################################
 

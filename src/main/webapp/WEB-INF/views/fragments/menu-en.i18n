@@ -51,6 +51,7 @@ master.menu.teacher.tutorials = Tutorials
 
 master.menu.learner = Learner
 master.menu.learner.help-requests = Help Requests
+master.menu.learner.learner-dashboard = Learner Dashboard
 
 # master.menu.user-account ####################################################
 
