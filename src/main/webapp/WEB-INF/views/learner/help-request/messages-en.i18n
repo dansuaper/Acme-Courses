@@ -1,0 +1,17 @@
+learner.help-request.form.label.ticker = Ticker
+learner.help-request.form.label.start-date = Start Date
+learner.help-request.form.label.end-date = End Date
+learner.help-request.form.label.statement = Statement 
+learner.help-request.form.label.budget = Budget
+learner.help-request.form.label.info = Info
+learner.help-request.form.label.status = Status
+learner.help-request.form.label.teacher-username = Teacher's Username
+learner.help-request.form.label.teacher-school = Teacher's School
+learner.help-request.form.label.teacher-info = Teacher's Info
+learner.help-request.form.label.teacher-statement = Teacher's Statement
+
+learner.help-request.list.label.ticker = Ticker
+learner.help-request.list.label.budget = Budget
+learner.help-request.list.label.start-date = Start Date
+learner.help-request.list.label.end-date = End Date
+learner.help-request.list.label.status = Status

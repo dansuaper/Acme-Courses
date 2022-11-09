@@ -47,6 +47,11 @@ master.menu.authenticated.posts = Publicaciones
 master.menu.teacher = Profesor
 master.menu.teacher.tutorials = Tutoriales
 
+# master.menu.learner #############################################################
+
+master.menu.learner = Aprendiz
+master.menu.learner.help-requests = Solicitudes de Ayuda
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
