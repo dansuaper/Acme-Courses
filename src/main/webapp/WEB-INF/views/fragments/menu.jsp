@@ -34,6 +34,7 @@
 		
 		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.any.user-accounts" action="/any/user-account/list"/>
+			<acme:menu-suboption code="master.menu.any.blinks" action="/any/blink/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
