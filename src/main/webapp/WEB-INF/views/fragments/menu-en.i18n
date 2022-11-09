@@ -35,6 +35,7 @@ master.menu.administrator.shut-down = Shut down
 master.menu.any = Any
 master.menu.any.user-accounts = User Accounts
 master.menu.any.blinks = Blinks
+master.menu.any.tutorials = Tutorials
 
 # master.menu.user-account ####################################################
 

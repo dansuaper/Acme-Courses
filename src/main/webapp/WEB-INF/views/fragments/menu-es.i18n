@@ -35,6 +35,7 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.any = Cualquiera
 master.menu.any.user-accounts = Cuentas de Usuario
 master.menu.any.blinks = Parpadeos
+master.menu.any.tutorials = Tutoriales
 
 # master.menu.user-account ####################################################
 
