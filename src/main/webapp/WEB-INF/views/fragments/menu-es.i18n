@@ -37,6 +37,11 @@ master.menu.any.user-accounts = Cuentas de Usuario
 master.menu.any.blinks = Parpadeos
 master.menu.any.tutorials = Tutoriales
 
+# master.menu.authenticated #############################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.posts = Publicaciones
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

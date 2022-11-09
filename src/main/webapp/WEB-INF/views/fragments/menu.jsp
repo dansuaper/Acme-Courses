@@ -37,6 +37,11 @@
 			<acme:menu-suboption code="master.menu.any.blinks" action="/any/blink/list"/>
 			<acme:menu-suboption code="master.menu.any.tutorials" action="/any/tutorial/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.posts" action="/authenticated/post/list"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
