@@ -37,6 +37,11 @@ master.menu.any.user-accounts = User Accounts
 master.menu.any.blinks = Blinks
 master.menu.any.tutorials = Tutorials
 
+# master.menu.authenticated #############################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.posts = Posts
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
