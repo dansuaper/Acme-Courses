@@ -1,0 +1,14 @@
+teacher.tutorial.form.label.type = Type
+teacher.tutorial.form.label.ticker = Ticker
+teacher.tutorial.form.label.title = Title
+teacher.tutorial.form.label.abstract-text = Abstract text
+teacher.tutorial.form.label.info = Info
+teacher.tutorial.form.label.cost = Cost
+teacher.tutorial.form.label.published = Published
+teacher.tutorial.form.label.teacher = Teacher
+
+teacher.tutorial.list.label.type = Type
+teacher.tutorial.list.label.title = Title
+teacher.tutorial.list.label.ticker = Ticker
+teacher.tutorial.list.label.teacher = Teacher
+teacher.tutorial.list.label.cost = Cost

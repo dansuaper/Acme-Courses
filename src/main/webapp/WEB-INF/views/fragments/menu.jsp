@@ -41,7 +41,11 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.posts" action="/authenticated/post/list"/>
 		</acme:menu-option>
-		
+
+		<acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
+			<acme:menu-suboption code="master.menu.teacher.tutorials" action="/teacher/tutorial/list" />
+		</acme:menu-option>
+
 	</acme:menu-left>
 
 	<acme:menu-right>
