@@ -1,0 +1,17 @@
+learner.help-request.form.label.ticker = Teletipo
+learner.help-request.form.label.start-date = Fecha Comienzo
+learner.help-request.form.label.end-date = Fecha Fin
+learner.help-request.form.label.statement = Declaración 
+learner.help-request.form.label.budget = Precio
+learner.help-request.form.label.info = Información
+learner.help-request.form.label.status = Estado
+learner.help-request.form.label.teacher-username = Nombre Usuario Profesor
+learner.help-request.form.label.teacher-school = Escuela Profesor
+learner.help-request.form.label.teacher-info = Información Profesor
+learner.help-request.form.label.teacher-statement = Declaración Profesor
+
+learner.help-request.list.label.ticker = Teletipo
+learner.help-request.list.label.budget = Precio
+learner.help-request.list.label.start-date = Fecha Comienzo
+learner.help-request.list.label.end-date = Fecha Fin
+learner.help-request.list.label.status = Estado
