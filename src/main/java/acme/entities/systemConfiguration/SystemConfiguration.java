@@ -6,6 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -40,5 +41,10 @@ public class SystemConfiguration extends AbstractEntity{
 	@Digits(integer = 1, fraction = 2)
 	public Double spamBooster;
 	
+	@NotBlank
+	public String moneyExchangeName;
+	
+	@URL
+	public String moneyExchangeLink;
 }
 

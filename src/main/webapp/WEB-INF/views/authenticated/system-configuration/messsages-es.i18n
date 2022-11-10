@@ -1,0 +1,4 @@
+authenticated.systemConfiguration.form.label.accepted-currencies = Divisas aceptadas
+authenticated.systemConfiguration.form.label.system-currency = Moneda del sistema
+authenticated.systemConfiguration.form.label.money-exchange-name = Conversor de monedas
+authenticated.systemConfiguration.form.label.money-exchange-link = Enlace al conversor

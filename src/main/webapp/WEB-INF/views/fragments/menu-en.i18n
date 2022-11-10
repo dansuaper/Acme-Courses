@@ -42,6 +42,7 @@ master.menu.any.tutorials = Tutorials list
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.posts = Posts
+master.menu.authenticated.system-configuration = System configuration
 
 # master.menu.teacher #############################################################
 
