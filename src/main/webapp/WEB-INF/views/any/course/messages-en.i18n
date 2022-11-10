@@ -1,0 +1,12 @@
+any.course.list.label.ticker = Ticker
+any.course.list.label.caption = Caption
+any.course.list.label.link = Info
+
+any.course.form.label.ticker = Ticker:
+any.course.form.label.caption = Caption:
+any.course.form.label.abstract-text = Abstract Text:
+any.course.form.label.link = Info:
+any.course.form.label.cost = Cost:
+any.course.form.label.convertir = Converted cost:
+any.course.form.label.teacher = Teacher:
+any.course.form.button.tutorials = Tutorials
