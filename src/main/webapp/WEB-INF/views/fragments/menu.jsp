@@ -26,6 +26,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/administrator-dashboard/show"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>
@@ -52,7 +54,6 @@
 			<acme:menu-suboption code="master.menu.learner.help-requests" action="/learner/help-request/list" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.learner.learner-dashboard" action="/learner/learner-dashboard/show"/>
-			<acme:menu-separator/>
 		</acme:menu-option>
 
 	</acme:menu-left>

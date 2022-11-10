@@ -17,7 +17,6 @@ public class AdministratorDashboard implements Serializable {
 
 	protected static final long serialVersionUID = 1L;
 	
-	
 //	THEORY TUTORIALS: Total number, average, deviation, minimum and maximum retail.
 	
 	int totalNumberOfTheoryTutorials;
@@ -29,10 +28,10 @@ public class AdministratorDashboard implements Serializable {
 //	LAB TUTORIALS: Total number, average, deviation, minimum and maximum retail.
 
 	int totalNumberOfLabTutorials;
-	Map<String,Double> retailPriceOfLabTutorialsByCurrency;
-	Map<String,Double> deviationRetailPriceOfLabTutorialsByCurrency;
-	Map<String,Double> minimumRetailPriceOfLabTutorialsByCurrency;
-	Map<String,Double> maximumRetailPriceOfLabTutorialsByCurrency;
+	Map<String,Double> averageCostOfLabTutorialsByCurrency;
+	Map<String,Double> deviationCostOfLabTutorialsByCurrency;
+	Map<String,Double> minimumCostOfLabTutorialsByCurrency;
+	Map<String,Double> maximumCostOfLabTutorialsByCurrency;
 
 //	HELP REQUESTS: Total number, average, deviation, minimum and maximum retail (Proposed, Accepted, Denied).
 	
@@ -41,6 +40,6 @@ public class AdministratorDashboard implements Serializable {
 	Map<Pair<HelpRequestStatus,String>, Double> deviationBudgetOfHelpRequestsByStatus;
 	Map<Pair<HelpRequestStatus,String>, Double> minimumBudgetOfHelpRequestsByStatus;
 	Map<Pair<HelpRequestStatus,String>, Double> maximumBudgetOfHelpRequestsByStatus;
-
+	
 }
 
