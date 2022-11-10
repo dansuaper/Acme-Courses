@@ -46,7 +46,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT max(t.cost.amount), t.cost.currency FROM Tutorial t WHERE t.type = 'LAB' GROUP BY t.cost.currency")
 	Collection<Tuple> maximumCostOfLabTutorialsByCurrency();
 	
-	// Help Requests
+	// Help Requests 
 	
 	@Query("SELECT h.status, count(h) FROM HelpRequest h GROUP BY h.status")
 	Collection<Tuple> totalNumberOfHelpRequestsByStatus();
@@ -63,6 +63,9 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT h.status, h.budget.currency, max(h.budget.amount) FROM HelpRequest h GROUP BY h.status")
 	Collection<Tuple> maximumBudgetOfHelpRequestsByStatus();
 	
+	//SystemConfiguration
 	
+	@Query("SELECT s.acceptedCurrencies FROM SystemConfiguration s")
+	String findSystemCurrencies();
 	
 }
