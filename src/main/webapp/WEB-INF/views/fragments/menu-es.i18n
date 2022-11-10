@@ -42,6 +42,7 @@ master.menu.any.tutorials = Lista de tutoriales
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.posts = Publicaciones
+master.menu.authenticated.system-configuration = Configuración del sistema
 
 # master.menu.teacher #############################################################
 

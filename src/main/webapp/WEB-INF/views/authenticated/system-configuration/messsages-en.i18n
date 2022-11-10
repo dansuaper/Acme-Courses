@@ -1,0 +1,4 @@
+authenticated.systemConfiguration.form.label.accepted-currencies = Accepted currencies
+authenticated.systemConfiguration.form.label.system-currency = System currency
+authenticated.systemConfiguration.form.label.money-exchange-name = Money exchange
+authenticated.systemConfiguration.form.label.money-exchange-link = Money exchange link
