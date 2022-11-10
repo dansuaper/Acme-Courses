@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.courses.Course;
 import acme.entities.quantities.Quantity;
 import acme.entities.tutorials.Tutorial;
+import acme.forms.MoneyExchange;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -31,7 +32,6 @@ public interface AnyCourseRepository extends AbstractRepository{
 		@Query("select sc.systemCurrency from SystemConfiguration sc")
 		String findSystemCurrency();		
 		
-//		@Query("select m from MoneyExchange m where m.source.currency = :currency and m.source.amount = :amount and m.target.currency = :systemCurrency")
-//		MoneyExchange findMoneyExchange(@Param("currency")String currency, @Param("amount")Double amount,
-//			@Param("systemCurrency")String systemCurrency);
+		@Query("select m from MoneyExchange m where m.source.currency = :currency and m.source.amount = :amount and m.target.currency = :systemCurrency")
+		MoneyExchange findMoneyExchange(String currency, Double amount, String systemCurrency);
 }
