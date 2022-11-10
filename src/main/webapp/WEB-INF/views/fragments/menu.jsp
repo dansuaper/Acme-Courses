@@ -35,7 +35,25 @@
 		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.any.user-accounts" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.any.course" action="/any/course/list"/>
+			<acme:menu-suboption code="master.menu.any.blinks" action="/any/blink/list"/>
+			<acme:menu-suboption code="master.menu.any.tutorials" action="/any/tutorial/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.posts" action="/authenticated/post/list"/>
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
+			<acme:menu-suboption code="master.menu.teacher.tutorials" action="/teacher/tutorial/list" />
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.learner" access="hasRole('Learner')">
+			<acme:menu-suboption code="master.menu.learner.help-requests" action="/learner/help-request/list" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.learner.learner-dashboard" action="/learner/learner-dashboard/show"/>
+			<acme:menu-separator/>
+		</acme:menu-option>
+
 	</acme:menu-left>
 
 	<acme:menu-right>

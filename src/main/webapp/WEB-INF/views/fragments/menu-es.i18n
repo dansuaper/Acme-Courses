@@ -35,6 +35,24 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.any = Cualquiera
 master.menu.any.user-accounts = Cuentas de Usuario
 master.menu.any.course = Lista de cursos
+master.menu.any.blinks = Lista de parpadeos
+master.menu.any.tutorials = Lista de tutoriales
+
+# master.menu.authenticated #############################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.posts = Publicaciones
+
+# master.menu.teacher #############################################################
+
+master.menu.teacher = Profesor
+master.menu.teacher.tutorials = Tutoriales
+
+# master.menu.learner #############################################################
+
+master.menu.learner = Aprendiz
+master.menu.learner.help-requests = Solicitudes de Ayuda
+master.menu.learner.learner-dashboard = Panel de Aprendiz
 
 # master.menu.user-account ####################################################
 

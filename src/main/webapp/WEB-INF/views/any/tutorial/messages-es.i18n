@@ -1,0 +1,14 @@
+any.tutorial.form.label.type = Tipo
+any.tutorial.form.label.ticker = Teletipo
+any.tutorial.form.label.title = Título
+any.tutorial.form.label.abstract-text = Texto abstracto
+any.tutorial.form.label.info = Información
+any.tutorial.form.label.cost = Precio
+any.tutorial.form.label.published = Publicado
+any.tutorial.form.label.teacher = Profesor
+
+any.tutorial.list.label.type = Tipo
+any.tutorial.list.label.title = Título
+any.tutorial.list.label.ticker = Teletipo
+any.tutorial.list.label.teacher = Profesor
+any.tutorial.list.label.cost = Precio

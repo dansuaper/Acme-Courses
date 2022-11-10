@@ -1,0 +1,18 @@
+learner.learner-dashboard.form.label.and-status = y estado
+learner.learner-dashboard.form.label.colon = :
+
+learner.learner-dashboard.form.label.average-sentence = Precio medio por divisa
+learner.learner-dashboard.form.label.deviation-sentence = Desviación típica por divisa
+learner.learner-dashboard.form.label.max-sentence = Máximo precio por divisa
+learner.learner-dashboard.form.label.min-sentence = Mínimo precio por divisa
+
+learner.learner-dashboard.form.label.avg-title = Información de las medias
+learner.learner-dashboard.form.label.deviationTitle= Información de las desviaciones típicas
+learner.learner-dashboard.form.label.maxTitle= Información de los máximos
+learner.learner-dashboard.form.label.minTitle= Información de los mínimos
+learner.learner-dashboard.form.label.absoluteTitle = Métricas totales
+learner.learner-dashboard.form.label.nohayPeticionesAyuda =	No hay peticiones de ayuda para calcular métricas (mirar información sobre métricas totales debajo)
+
+learner.learner-dashboard.form.label.totalNumberOfProposedHelpRequests = Total de peticiones de ayuda propuestas:
+learner.learner-dashboard.form.label.totalNumberOfAcceptedHelpRequests = Total de peticiones de ayuda aceptadas:
+learner.learner-dashboard.form.label.totalNumberOfDeniedHelpRequests = Total de peticiones de ayuda denegadas:

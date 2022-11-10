@@ -1,0 +1,11 @@
+authenticated.post.list.label.caption = Título
+authenticated.post.list.label.instantation-moment = Momento Creación
+authenticated.post.list.label.message = Mensaje
+authenticated.post.list.label.info = Info
+authenticated.post.list.label.flag = Bandera
+
+authenticated.post.form.label.caption = Título
+authenticated.post.form.label.instantation-moment = Momento Creación
+authenticated.post.form.label.message = Mensaje
+authenticated.post.form.label.info = Info
+authenticated.post.form.label.flag = Bandera

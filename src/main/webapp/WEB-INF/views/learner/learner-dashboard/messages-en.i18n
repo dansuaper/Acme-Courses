@@ -1,0 +1,18 @@
+learner.learner-dashboard.form.label.and-status = and status
+learner.learner-dashboard.form.label.colon = :
+
+learner.learner-dashboard.form.label.average-sentence = Average budget by currency 
+learner.learner-dashboard.form.label.deviation-sentence = Deviation budget by currency 
+learner.learner-dashboard.form.label.max-sentence = Maximum budget by currency
+learner.learner-dashboard.form.label.min-sentence = Minimum budget by currency
+
+learner.learner-dashboard.form.label.avg-title = Averages information.
+learner.learner-dashboard.form.label.deviationTitle= Deviations information.
+learner.learner-dashboard.form.label.maxTitle= Maximums information.
+learner.learner-dashboard.form.label.minTitle= Minimums information.
+learner.learner-dashboard.form.label.absoluteTitle = Total Metrics
+learner.learner-dashboard.form.label.nohayPeticionesAyuda =	 There are no help requests to compute metrics (see total metrics information below)
+
+learner.learner-dashboard.form.label.totalNumberOfProposedHelpRequests = Total number of proposed help requests:
+learner.learner-dashboard.form.label.totalNumberOfAcceptedHelpRequests = Total number of accepted help requests:
+learner.learner-dashboard.form.label.totalNumberOfDeniedHelpRequests = Total number of denied help requests:
