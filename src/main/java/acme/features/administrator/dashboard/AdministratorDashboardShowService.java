@@ -60,7 +60,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		totalNumberOfTheoryTutorials = this.repository.totalNumberOfTheoryTutorials();
 		for(final String currency: currencies) {
-//			final Collection<Tuple> a = this.repository.averageCostOfTheoryTutorialsByCurrency();
 			this.repository.averageCostOfTheoryTutorialsByCurrency().stream()
 			.forEach(x-> averageCostOfTheoryTutorialsByCurrency
 				.put(currency, Double.valueOf(x.get(0).toString())));
