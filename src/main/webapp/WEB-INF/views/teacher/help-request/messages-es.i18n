@@ -1,0 +1,17 @@
+teacher.help-request.list.label.ticker = Código
+teacher.help-request.list.label.startDate = Fecha de inicio
+teacher.help-request.list.label.endDate = Fecha de fin
+teacher.help-request.list.label.info = Link de información
+teacher.help-request.list.label.status = Estado
+
+teacher.help-request.form.label.ticker = Código
+teacher.help-request.form.label.startDate = Fecha de Inicio
+teacher.help-request.form.label.endDate = Fecha de Fin
+teacher.help-request.form.label.budget = Presupuesto
+teacher.help-request.form.label.convertir = Presupuesto convertido
+teacher.help-request.form.label.info = Enlace de información
+teacher.help-request.form.label.status = Estado
+teacher.help-request.form.label.username = Nombre del usuario del profesor
+teacher.help-request.form.label.school = Nombre de la escuela del profesor
+teacher.help-request.form.label.teacher-link = Enlace de información del profesor
+teacher.help-request.form.label.statement = Declaración del profesor
