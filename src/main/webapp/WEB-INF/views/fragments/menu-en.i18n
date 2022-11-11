@@ -24,7 +24,8 @@ master.menu.anonymous.raul-favourite-link = 47428674Y: Montalbán Martín, Raúl
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
-master.menu.administrator.administrator-dashboard = Dashboard
+master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.system-configuration = System configuration
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)

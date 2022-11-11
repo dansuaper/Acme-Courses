@@ -1,0 +1,8 @@
+administrator.systemConfiguration.form.label.accepted-currencies = Accepted currencies
+administrator.systemConfiguration.form.label.system-currency = System currency
+administrator.systemConfiguration.form.label.spam-records-es = Spanish Spam records
+administrator.systemConfiguration.form.label.spam-records-en = English Spam records
+administrator.systemConfiguration.form.label.spam-threshold = Spam threshold
+administrator.systemConfiguration.form.label.spam-booster = Spam booster
+administrator.systemConfiguration.form.label.money-exchange-name = Money exchange
+administrator.systemConfiguration.form.label.money-exchange-link = Money exchange link

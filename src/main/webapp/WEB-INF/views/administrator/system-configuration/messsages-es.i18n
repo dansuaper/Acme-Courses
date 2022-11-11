@@ -1,0 +1,8 @@
+administrator.systemConfiguration.form.label.accepted-currencies = Divisas aceptadas
+administrator.systemConfiguration.form.label.system-currency = Moneda del sistema
+administrator.systemConfiguration.form.label.spam-records-es = Valores spam español
+administrator.systemConfiguration.form.label.spam-records-en = Valores spam inglés
+administrator.systemConfiguration.form.label.spam-threshold = Valor límite spam
+administrator.systemConfiguration.form.label.spam-booster = Valor boost spam
+administrator.systemConfiguration.form.label.money-exchange-name = Conversor de monedas
+administrator.systemConfiguration.form.label.money-exchange-link = Enlace al conversor
