@@ -19,7 +19,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-cost-of-theory-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.average-cost-of-theory-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -33,7 +33,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-cost-of-theory-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.deviation-cost-of-theory-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -47,7 +47,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-cost-of-theory-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.minimum-cost-of-theory-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -61,7 +61,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-cost-of-theory-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.maximum-cost-of-theory-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -84,7 +84,7 @@
 	
 		<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-cost-of-lab-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.average-cost-of-lab-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -98,7 +98,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-cost-of-lab-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.deviation-cost-of-lab-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -112,7 +112,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-cost-of-lab-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.minimum-cost-of-lab-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -126,7 +126,7 @@
 	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-cost-of-lab-turorials-by-currency"/>
+			<acme:message code="administrator.dashboard.form.label.maximum-cost-of-lab-tutorials-by-currency"/>
 		</th>
 		
 	</tr>
@@ -244,68 +244,69 @@ $(document).ready(function() {
 	
 	}
 	
-	var averageIngredients = {
+	var averageTheory = {
 		<jstl:forEach items="${averageCostOfTheoryTutorialsByCurrency}" var="item" varStatus="loop">
  	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 		</jstl:forEach>
 	};
-	newChart(Object.keys(averageTheoryTutorials), Object.values(averageTheoryTutorials), "averageCostOfTheoryTutorialsByCurrency");
+	newChart(Object.keys(averageTheory), Object.values(averageTheory), "averageCostOfTheoryTutorialsByCurrency");
 	
-	var deviationIngredients = {
+	var deviationTheory = {
 			<jstl:forEach items="${deviationCostOfTheoryTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(deviationTheoryTutorials), Object.values(deviationTheoryTutorials), "deviationCostOfTheoryTutorialsByCurrency");
+		newChart(Object.keys(deviationTheory), Object.values(deviationTheory), "deviationCostOfTheoryTutorialsByCurrency");
 	
-	var minimumIngredients = {
+	var minimumTheory = {
 			<jstl:forEach items="${minimumCostOfTheoryTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(minimumTheoryTutorials), Object.values(minimumTheoryTutorials), "minimumCostOfTheoryTutorialsByCurrency");
+		newChart(Object.keys(minimumTheory), Object.values(minimumTheory), "minimumCostOfTheoryTutorialsByCurrency");
 		
-	var maximumIngredients = {
+	var maximumTheory = {
 			<jstl:forEach items="${maximumCostOfTheoryTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(maximumTheoryTutorials), Object.values(maximumTheoryTutorials), "maximumCostOfTheoryTutorialsByCurrency");
+		newChart(Object.keys(maximumTheory), Object.values(maximumTheory), "maximumCostOfTheoryTutorialsByCurrency");
 	
-	var averageKitchenUtensils = {
+	var averageLab = {
 			<jstl:forEach items="${averageCostOfLabTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(averageLabTutorials), Object.values(averageLabTutorials), "averageCostOfLabTutorialsByCurrency");
+		newChart(Object.keys(averageLab), Object.values(averageLab), "averageCostOfLabTutorialsByCurrency");
 			
-	var deviationKitchenUtensils = {
+	var deviationLab = {
 			<jstl:forEach items="${deviationCostOfLabTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(deviationLabTutorials), Object.values(deviationLabTutorials), "deviationCostOfLabTutorialsByCurrency");
+		newChart(Object.keys(deviationLab), Object.values(deviationLab), "deviationCostOfLabTutorialsByCurrency");
 			
-	var minimumKitchenUtensils = {
+	var minimumLab = {
 			<jstl:forEach items="${minimumCostOfLabTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(minimumLabTutorials), Object.values(minimumLabTutorials), "minimumCostOfLabTutorialsByCurrency");
+		newChart(Object.keys(minimumLab), Object.values(minimumLab), "minimumCostOfLabTutorialsByCurrency");
 				
-	var maximumKitchenUtensils = {
-			<jstl:forEach items="${maximumRetailPriceOfKitchenUtensilsByCurrency}" var="item" varStatus="loop">
+	var maximumLab = {
+			<jstl:forEach items="${maximumCostOfLabTutorialsByCurrency}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
-		newChart(Object.keys(maximumLabTutorials), Object.values(maximumLabTutorials), "maximumCostOfLabTutorialsByCurrency");
+		newChart(Object.keys(maximumLab), Object.values(maximumLab), "maximumCostOfLabTutorialsByCurrency");
 	
-	var totalFineDishes = {
-			<jstl:forEach items="${totalNumberOfFineDishesByStatus}" var="item" varStatus="loop">
+	var totalHelpRequests = {
+			<jstl:forEach items="${totalNumberOfHelpRequestsByStatus}" var="item" varStatus="loop">
 	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
 			</jstl:forEach>
 		};
 		newChart(Object.keys(totalHelpRequests), Object.values(totalHelpRequests), "totalNumberOfHelpRequestsByStatus");
+
 	});
 </script>
 

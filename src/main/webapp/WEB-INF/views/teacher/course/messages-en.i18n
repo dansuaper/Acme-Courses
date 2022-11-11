@@ -1,0 +1,14 @@
+teacher.course.list.label.ticker= Ticker
+teacher.course.list.label.caption = Caption
+teacher.course.list.label.link = Link
+teacher.course.list.label.teacher = Teacher
+
+teacher.course.form.label.ticker = Ticker
+teacher.course.form.label.caption = Caption
+teacher.course.form.label.abstract-text = Abstract text
+teacher.course.form.label.link = Link
+teacher.course.form.label.teacher = Teacher
+teacher.course.form.label.cost = Cost
+teacher.course.form.label.convertir = Converted cost
+teacher.course.form.button.tutorials = Tutorials
+teacher.course.form.label.published = Published

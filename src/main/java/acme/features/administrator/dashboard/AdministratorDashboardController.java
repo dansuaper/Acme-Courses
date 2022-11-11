@@ -11,13 +11,16 @@ import acme.framework.roles.Administrator;
 
 @Controller
 public class AdministratorDashboardController extends AbstractController<Administrator, AdministratorDashboard>{
-	@Autowired
-	protected AdministratorDashboardShowService adShowService;
 
-
-	@PostConstruct
-	protected void initialise() {
-		super.addCommand("show", this.adShowService);
-	}
-
+	// Internal state ---------------------------------------------------------
+		
+		@Autowired
+		protected AdministratorDashboardShowService showService;
+	
+	// Constructors -----------------------------------------------------------
+		
+		@PostConstruct
+		protected void initialise() {
+			super.addCommand("show", this.showService);
+		}
 }

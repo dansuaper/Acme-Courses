@@ -1,0 +1,28 @@
+chef.recipe.list.label.code = Código
+chef.recipe.list.label.heading = Título
+chef.recipe.list.label.link = Enlace
+any.recipe.list.label.chef = Chef
+
+chef.recipe.form.label.code = Código:
+chef.recipe.form.label.description = Descripción:
+chef.recipe.form.label.preparation-notes = Notas de preparación:
+chef.recipe.form.label.link = Enlace:
+chef.recipe.form.label.chef = Chef:
+chef.recipe.form.label.retail-price = Precio al por menor
+chef.recipe.form.label.convertir = Precio convertido
+chef.recipe.form.button.elements = Elementos
+chef.recipe.form.label.published = Publicado
+
+chef.recipe.form.button.delete = Borrar
+chef.recipe.form.button.create= Crear
+chef.recipe.form.button.update = Actualizar
+chef.recipe.form.button.publish = Publicar
+
+chef.recipe.list.button.create = Crear
+
+chef.recipe.form.error.duplicated = Este código ya existe
+chef.recipe.form.error.no-items = Ningún elemento asignado
+chef.recipe.form.error.no-items-published = Faltan elementos por publicar
+chef.recipe.form.error.no-ingredient = No hay ingredientes asignados
+chef.recipe.form.error.no-kitchen-utensil = No hay utensilios de cocina asignados
+chef.recipe.form.error.only-one-kitchen-utensil = Hay mas de un utensilio de cocina asignado, se requiere unicamente uno

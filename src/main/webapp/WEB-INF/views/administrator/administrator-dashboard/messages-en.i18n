@@ -1,16 +1,16 @@
 administrator.dashboard.form.title.general-indicators = General indicators
 
 administrator.dashboard.form.label.total-number-of-theory-tutorials = Number of theory tutorials
-administrator.dashboard.form.label.average-retail-price-of-theory-tutorials-by-currency = Average retail price of theory tutorials
-administrator.dashboard.form.label.deviation-retail-price-of-theory-tutorials-by-currency = Deviation retail price of theory tutorials
-administrator.dashboard.form.label.minimum-retail-price-of-theory-tutorials-by-currency = Minimum retail price of theory tutorials
-administrator.dashboard.form.label.maximum-retail-price-of-theory-tutorials-by-currency = Maximum retail price of theory tutorials
+administrator.dashboard.form.label.average-cost-of-theory-tutorials-by-currency = Average retail price of theory tutorials
+administrator.dashboard.form.label.deviation-cost-of-theory-tutorials-by-currency = Deviation retail price of theory tutorials
+administrator.dashboard.form.label.minimum-cost-of-theory-tutorials-by-currency = Minimum retail price of theory tutorials
+administrator.dashboard.form.label.maximum-cost-of-theory-tutorials-by-currency = Maximum retail price of theory tutorials
 
-administrator.dashboard.form.label.total-number-of-lab-tutorials-by-currency = Number of lab tutorials
-administrator.dashboard.form.label.average-retail-price-of-lab-tutorials-by-currency = Average number of lab tutorials
-administrator.dashboard.form.label.deviation-retail-price-of-lab-tutorials-by-currency = Deviation retail price of lab tutorials
-administrator.dashboard.form.label.minimum-retail-price-of-lab-tutorials-by-currency = Minimum retail price of lab tutorials
-administrator.dashboard.form.label.maximum-retail-price-of-lab-tutorials-by-currency = Maximum retail price of lab tutorials
+administrator.dashboard.form.label.total-number-of-lab-tutorials = Number of lab tutorials
+administrator.dashboard.form.label.average-cost-of-lab-tutorials-by-currency = Average number of lab tutorials
+administrator.dashboard.form.label.deviation-cost-of-lab-tutorials-by-currency = Deviation retail price of lab tutorials
+administrator.dashboard.form.label.minimum-cost-of-lab-tutorials-by-currency = Minimum retail price of lab tutorials
+administrator.dashboard.form.label.maximum-cost-of-lab-tutorials-by-currency = Maximum retail price of lab tutorials
 
 administrator.dashboard.form.label.total-number-of-help-requests-by-status = Number of help requests by status
 administrator.dashboard.form.status.average.ACCEPTED.EUR = Average budget of accepted help requests (EUR)
@@ -49,7 +49,3 @@ administrator.dashboard.form.status.maximum.DENIED.GBP = Maximum budget of denie
 administrator.dashboard.form.status.maximum.PROPOSED.EUR = Maximum budget of proposed help requests (EUR)
 administrator.dashboard.form.status.maximum.PROPOSED.USD = Maximum budget of proposed help requests (USD)
 administrator.dashboard.form.status.maximum.PROPOSED.GBP = Maximum budget of proposed help requests (GBP)
-
-
-
-

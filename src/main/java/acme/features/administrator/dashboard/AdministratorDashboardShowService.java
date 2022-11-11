@@ -44,14 +44,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		final int totalNumberOfLabTutorials;
 		final Map<String,Double> averageCostOfLabTutorialsByCurrency = new HashMap<>();
-		final Map<String,Double> deviationCostOfLabTutorialsByCurrency  = new HashMap<>();
-		final Map<String,Double> minimumCostOfLabTutorialsByCurrency  = new HashMap<>();
-		final Map<String,Double> maximumCostOfLabTutorialsByCurrency  = new HashMap<>();
+		final Map<String,Double> deviationCostOfLabTutorialsByCurrency = new HashMap<>();
+		final Map<String,Double> minimumCostOfLabTutorialsByCurrency = new HashMap<>();
+		final Map<String,Double> maximumCostOfLabTutorialsByCurrency = new HashMap<>();
 
 		final EnumMap<HelpRequestStatus, Integer> totalNumberOfHelpRequestsByStatus = new EnumMap<>(HelpRequestStatus.class);
 		final Map<Pair<HelpRequestStatus,String>, Double> averageBudgetOfHelpRequestsByStatus = new HashMap<>();
 		final Map<Pair<HelpRequestStatus,String>, Double> deviationBudgetOfHelpRequestsByStatus = new HashMap<>();
-		final Map<Pair<HelpRequestStatus,String>, Double> minimumBudgetOfHelpRequestsByStatus= new HashMap<>();
+		final Map<Pair<HelpRequestStatus,String>, Double> minimumBudgetOfHelpRequestsByStatus = new HashMap<>();
 		final Map<Pair<HelpRequestStatus,String>, Double> maximumBudgetOfHelpRequestsByStatus = new HashMap<>();
 
 		final String acceptedCurrencies = this.repository.findSystemCurrencies();
@@ -62,44 +62,44 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		for(final String currency: currencies) {
 			this.repository.averageCostOfTheoryTutorialsByCurrency().stream()
 			.forEach(x-> averageCostOfTheoryTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.deviationCostOfTheoryTutorialsByCurrency().stream()
 			.forEach(x-> deviationCostOfTheoryTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.minimumCostOfTheoryTutorialsByCurrency().stream()
 			.forEach(x-> minimumCostOfTheoryTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.maximumCostOfTheoryTutorialsByCurrency().stream()
 			.forEach(x-> maximumCostOfTheoryTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		
 		totalNumberOfLabTutorials = this.repository.totalNumberOfLabTutorials();
 		for(final String currency: currencies) {
 			this.repository.averageCostOfLabTutorialsByCurrency().stream()
 			.forEach(x-> averageCostOfLabTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.deviationCostOfLabTutorialsByCurrency().stream()
 			.forEach(x-> deviationCostOfLabTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.minimumCostOfLabTutorialsByCurrency().stream()
 			.forEach(x-> minimumCostOfLabTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(final String currency: currencies) {
 			this.repository.maximumCostOfLabTutorialsByCurrency().stream()
 			.forEach(x-> maximumCostOfLabTutorialsByCurrency
-				.put(currency, Double.valueOf(x.get(1).toString())));
+				.put(currency, Double.valueOf(x.get(0).toString())));
 		}
 		for(int i = 0; i < this.repository.totalNumberOfHelpRequestsByStatus().size(); i++) {
 			this.repository.totalNumberOfHelpRequestsByStatus().stream()
@@ -154,10 +154,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "totalNumberOfHelpRequestsByStatus", 
-			"totalNumberOfTheoryTutorials", "averageCostOfTheoryTutorialsByCurrency", "deviationCostOfTheoryTutorialsByCurrency", "maximumCostOfTheoryTutorialsByCurrency","minimumCostOfTheoryTutorialsByCurrency",
-			"totalNumberOfLabTutorials","averageCostOfLabTutorialsByCurrency","deviationCostOfLabTutorialsByCurrency","maximumCostOfLabTutorialsByCurrency","minimumCostOfLabTutorialsByCurrency",
-			"averageBudgetOfHelpRequestsByStatus","deviationBudgetOfHelpRequestsByStatus","maximumBudgetOfHelpRequestsByStatus","minimumBudgetOfHelpRequestsByStatus");
+		
+		request.unbind(entity, model, "totalNumberOfTheoryTutorials", "averageCostOfTheoryTutorialsByCurrency", 
+			"deviationCostOfTheoryTutorialsByCurrency", "minimumCostOfTheoryTutorialsByCurrency",
+			"maximumCostOfTheoryTutorialsByCurrency", "totalNumberOfLabTutorials",
+			"averageCostOfLabTutorialsByCurrency", "deviationCostOfLabTutorialsByCurrency",
+			"minimumCostOfLabTutorialsByCurrency", "maximumCostOfLabTutorialsByCurrency",
+			"totalNumberOfHelpRequestsByStatus", "averageBudgetOfHelpRequestsByStatus",
+			"deviationBudgetOfHelpRequestsByStatus", "minimumBudgetOfHelpRequestsByStatus",
+			"maximumBudgetOfHelpRequestsByStatus");
 	}
+
 }

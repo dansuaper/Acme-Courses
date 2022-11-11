@@ -24,7 +24,7 @@ master.menu.anonymous.raul-favourite-link = 47428674Y: Montalbán Martín, Raúl
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
-master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.administrator-dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
@@ -47,7 +47,8 @@ master.menu.authenticated.system-configuration = Configuración del sistema
 # master.menu.teacher #############################################################
 
 master.menu.teacher = Profesor
-master.menu.teacher.tutorials = Tutoriales
+master.menu.teacher.tutorials = Lista de tutoriales
+master.menu.teacher.courses = Lista de cursos
 
 # master.menu.learner #############################################################
 
