@@ -4,7 +4,6 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	
 	<acme:input-textbox code="any.course.form.label.ticker" path="ticker"/>	
 	<acme:input-textbox code="any.course.form.label.caption" path="caption"/>	
 	<acme:input-textarea code="any.course.form.label.abstract-text" path="abstractText"/>
@@ -15,5 +14,5 @@
 	</jstl:if>
 	<acme:input-textbox code="any.course.form.label.teacher" path="teacher.userAccount.username"/>
 	
-	<acme:button code="any.course.form.button.tutorials" action="/any/tutorial/listCourseElements?id=${id}"/>
+	<acme:button code="any.course.form.button.tutorials" action="/any/tutorial/listCourseTutorials?id=${id}"/>
 </acme:form>
