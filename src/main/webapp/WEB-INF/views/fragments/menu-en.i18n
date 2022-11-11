@@ -50,6 +50,7 @@ master.menu.authenticated.system-configuration = System configuration
 master.menu.teacher = Teacher
 master.menu.teacher.tutorials = Tutorials
 master.menu.teacher.courses = Courses
+master.menu.teacher.help-requests = Help requests
 
 # master.menu.learner #############################################################
 

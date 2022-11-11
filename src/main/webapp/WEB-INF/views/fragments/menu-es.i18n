@@ -50,6 +50,7 @@ master.menu.authenticated.system-configuration = Configuración del sistema
 master.menu.teacher = Profesor
 master.menu.teacher.tutorials = Lista de tutoriales
 master.menu.teacher.courses = Lista de cursos
+master.menu.teacher.help-requests = Lista de peticiones de ayuda
 
 # master.menu.learner #############################################################
 
