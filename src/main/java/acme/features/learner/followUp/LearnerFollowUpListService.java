@@ -1,4 +1,4 @@
-package acme.features.teacher.followUp;
+package acme.features.learner.followUp;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +8,13 @@ import acme.entities.followUps.FollowUp;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
-import acme.roles.Teacher; 
+import acme.roles.Learner; 
  
 @Service 
-public class TeacherFollowUpListService implements AbstractListService<Teacher, FollowUp> { 
+public class LearnerFollowUpListService implements AbstractListService<Learner, FollowUp> { 
 	 
 	@Autowired 
-	protected TeacherFollowUpRepository repository; 
+	protected LearnerFollowUpRepository repository; 
  
 	@Override 
 	public boolean authorise(final Request<FollowUp> request) { 

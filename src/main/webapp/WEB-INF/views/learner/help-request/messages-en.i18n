@@ -15,3 +15,5 @@ learner.help-request.list.label.budget = Budget
 learner.help-request.list.label.start-date = Start Date
 learner.help-request.list.label.end-date = End Date
 learner.help-request.list.label.status = Status
+
+learner.help-request.form.button.follow-up = Follow ups
