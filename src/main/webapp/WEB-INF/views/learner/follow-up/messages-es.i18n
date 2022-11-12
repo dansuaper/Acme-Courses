@@ -1,0 +1,8 @@
+learner.followUp.form.label.sequenceNumber = Número de secuencia
+learner.followUp.form.label.instantiationMoment = Momento de creación
+learner.followUp.form.label.message = Mensaje
+learner.followUp.form.label.info = Enlace de información
+
+learner.followUp.list.label.sequenceNumber = Número de secuencia
+learner.followUp.list.label.instantiationMoment = Momento de creación
+learner.followUp.list.label.info = Enlace de información
