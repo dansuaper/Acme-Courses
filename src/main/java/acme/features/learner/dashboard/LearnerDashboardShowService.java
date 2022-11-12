@@ -1,12 +1,16 @@
 package acme.features.learner.dashboard;
 
+import java.util.Arrays;
+import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
+import acme.entities.helpRequests.HelpRequestStatus;
 import acme.forms.LearnerDashboard;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -18,80 +22,64 @@ public class LearnerDashboardShowService implements AbstractShowService<Learner,
 
 	@Autowired
 	protected LearnerDashboardRepository repository;
-
-
+	
 	@Override
 	public boolean authorise(final Request<LearnerDashboard> request) {
 		assert request != null;
+		
 		return true;
 	}
 
 	@Override
 	public LearnerDashboard findOne(final Request<LearnerDashboard> request) {
-
 		assert request != null;
-		final LearnerDashboard result = new LearnerDashboard();
-		final int totalNumberOfProposedHelpRequests = this.repository.totalNumberOfProposedHelpRequests();
-		final int totalNumberOfAcceptedHelpRequests = this.repository.totalNumberOfAcceptedHelpRequests();
-		final int totalNumberOfDeniedHelpRequests = this.repository.totalNumberOfDeniedHelpRequests();
-		final Map<Pair<String,String>,Double> averageBudgetByCurrency = new HashMap<Pair<String,String>,Double>();
-		final Map<Pair<String,String>,Double> deviationBudgetByCurrency = new HashMap<Pair<String,String>,Double>();
-		final Map<Pair<String,String>,Double> minBudgetByCurrency = new HashMap<Pair<String,String>,Double>();
-		final Map<Pair<String,String>,Double> maxBudgetByCurrency = new HashMap<Pair<String,String>,Double>();
 
-		int i = 0;
+		final LearnerDashboard result;
+		
+		final EnumMap<HelpRequestStatus, Integer> totalNumberOfHelpRequestsByStatus = new EnumMap<>(HelpRequestStatus.class);
+		final Map<Pair<HelpRequestStatus,String>, Double> averageBudgetOfHelpRequestsByStatus = new HashMap<>();
+		final Map<Pair<HelpRequestStatus,String>, Double> deviationBudgetOfHelpRequestsByStatus = new HashMap<>();
+		final Map<Pair<HelpRequestStatus,String>, Double> minimumBudgetOfHelpRequestsByStatus = new HashMap<>();
+		final Map<Pair<HelpRequestStatus,String>, Double> maximumBudgetOfHelpRequestsByStatus = new HashMap<>();
 
-		while (i < this.repository.averageBudgetByCurrency().size()) {
-			final String linea = this.repository.averageBudgetByCurrency().get(i);
-			final String[] sub = linea.split(",");
-			final Double key = Double.parseDouble(sub[1]);
-			final String divisa = sub[0];
-			final String estado = sub[2];
-			final Pair<String, String> res = Pair.of(divisa, estado);
-			averageBudgetByCurrency.put(res, key);
-			i++;
+		final String acceptedCurrencies = this.repository.findSystemCurrencies();
+		final String[] split = acceptedCurrencies.split(","); 
+		final List<String> currencies = Arrays.asList(split);
+		
+		
+		for(int i = 0; i < this.repository.totalNumberOfProposedHelpRequestsByStatus().size(); i++) {
+			this.repository.totalNumberOfProposedHelpRequestsByStatus().stream()
+			.forEach(x -> totalNumberOfHelpRequestsByStatus.put((HelpRequestStatus) x.get(0), Integer.parseInt(x.get(1).toString())));
 		}
-		i = 0;
-		while (i < this.repository.deviationBudgetByCurrency().size()) {
-			final String linea = this.repository.deviationBudgetByCurrency().get(i);
-			final String[] sub = linea.split(",");
-			final Double key = Double.parseDouble(sub[1]);
-			final String divisa = sub[0];
-			final String estado = sub[2];
-			final Pair<String, String> res = Pair.of(divisa, estado);
-			deviationBudgetByCurrency.put(res, key);
-			i++;
+		for(final String currency: currencies) {
+			this.repository.averageBudgetOfHelpRequestsByStatus().stream()
+			.forEach(x-> averageBudgetOfHelpRequestsByStatus
+				.put(Pair.of((HelpRequestStatus) x.get(0), currency), Double.valueOf(x.get(2).toString())));
 		}
-		i = 0;
-		while (i < this.repository.minBudgetByCurrency().size()) {
-			final String linea = this.repository.minBudgetByCurrency().get(i);
-			final String[] sub = linea.split(",");
-			final Double key = Double.parseDouble(sub[1]);
-			final String divisa = sub[0];
-			final String estado = sub[2];
-			final Pair<String, String> res = Pair.of(divisa, estado);
-			minBudgetByCurrency.put(res, key);
-			i++;
+		for(final String currency: currencies) {
+			this.repository.deviationBudgetOfHelpRequestsByStatus()
+			.forEach(x-> deviationBudgetOfHelpRequestsByStatus
+				.put(Pair.of((HelpRequestStatus) x.get(0), currency), Double.valueOf(x.get(2).toString())));
 		}
-		i = 0;
-		while (i < this.repository.maxBudgetByCurrency().size()) {
-			final String linea = this.repository.maxBudgetByCurrency().get(i);
-			final String[] sub = linea.split(",");
-			final Double key = Double.parseDouble(sub[1]);
-			final String divisa = sub[0];
-			final String estado = sub[2];
-			final Pair<String, String> res = Pair.of(divisa, estado);
-			maxBudgetByCurrency.put(res, key);
-			i++;
+		for(final String currency: currencies) {
+			this.repository.minimumBudgetOfHelpRequestsByStatus().stream()
+			.forEach(x-> minimumBudgetOfHelpRequestsByStatus
+				.put(Pair.of((HelpRequestStatus) x.get(0), currency), Double.valueOf(x.get(2).toString())));
 		}
-		result.setTotalNumberOfAcceptedHelpRequests(totalNumberOfAcceptedHelpRequests);
-		result.setTotalNumberOfProposedHelpRequests(totalNumberOfProposedHelpRequests);
-		result.setTotalNumberOfDeniedHelpRequests(totalNumberOfDeniedHelpRequests);
-		result.setAverageBudgetByCurrency(averageBudgetByCurrency);
-		result.setDeviationBudgetByCurrency(deviationBudgetByCurrency);
-		result.setMinBudgetByCurrency(minBudgetByCurrency);
-		result.setMaxBudgetByCurrency(maxBudgetByCurrency);
-
+		for(final String currency: currencies) {
+			this.repository.maximumBudgetOfHelpRequestsByStatus().stream()
+			.forEach(x-> maximumBudgetOfHelpRequestsByStatus
+				.put(Pair.of((HelpRequestStatus) x.get(0), currency), Double.valueOf(x.get(2).toString())));
+		}
+		
+		result = new LearnerDashboard();
+		
+		result.setTotalNumberOfHelpRequestsByStatus(totalNumberOfHelpRequestsByStatus);
+		result.setAverageBudgetOfHelpRequestsByStatus(averageBudgetOfHelpRequestsByStatus);
+		result.setDeviationBudgetOfHelpRequestsByStatus(deviationBudgetOfHelpRequestsByStatus);
+		result.setMinimumBudgetOfHelpRequestsByStatus(minimumBudgetOfHelpRequestsByStatus);
+		result.setMaximumBudgetOfHelpRequestsByStatus(maximumBudgetOfHelpRequestsByStatus);
+		
 		return result;
 	}
 
@@ -100,8 +88,10 @@ public class LearnerDashboardShowService implements AbstractShowService<Learner,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "totalNumberOfProposedHelpRequests", "totalNumberOfAcceptedHelpRequests", "totalNumberOfDeniedHelpRequests", "averageBudgetByCurrency", "deviationBudgetByCurrency", "minBudgetByCurrency", "maxBudgetByCurrency");
+		
+		request.unbind(entity, model, "totalNumberOfHelpRequestsByStatus", 
+			"averageBudgetOfHelpRequestsByStatus", "deviationBudgetOfHelpRequestsByStatus",
+			"minimumBudgetOfHelpRequestsByStatus", "maximumBudgetOfHelpRequestsByStatus");
 	}
 
 }

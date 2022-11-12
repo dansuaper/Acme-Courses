@@ -2,141 +2,125 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
-<%@taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 
-	<acme:message code="learner.learner-dashboard.form.label.avg-title"/>	
-	<table class="table table-sm">	
-		<caption></caption>
+<h2>
+	<acme:message code="learner.dashboard.form.title.general-indicators"/>
+</h2>
+
+<table class="table table-sm" aria-describedby="dashboard">
+	<tr>
+		<th scope="row">
+			<acme:message code="learner.dashboard.form.label.total-number-of-help-requests-by-status"/>
+		</th> 
 		
-		
-	<jstl:if test="${empty averageBudgetByCurrency}">
-	<acme:message code="learner.learner-dashboard.form.label.nohayPeticionesAyuda"/>	
-	<br>
-	<br>
-	</jstl:if>	
-		<jstl:forEach items="${averageBudgetByCurrency}" var="entry"> 	
-		<tr>	
-			<th id="">	
-			<acme:message code="learner.learner-dashboard.form.label.average-sentence"/>		
-			<jstl:set var = "string1" value = "${entry.key}"/>
-			<jstl:set var = "string2" value = "${fn:split(string1, '->')}" />
-			<acme:print value="${string2[0]}"/>
-			<acme:message code="learner.learner-dashboard.form.label.and-status"/>
-			<acme:print value="${string2[1]}"/>
-			<acme:message code="learner.learner-dashboard.form.label.colon"/>
-			</th>
-			<td style= "text-align:right;">
-				<acme:print value="${entry.value}"/>
-				
-			</td>		
+	</tr>
+	<tr>
+		<td>
+			<div>
+				<canvas id="totalNumberOfHelpRequestsByStatus"></canvas>
+			</div>
+		</td>
+	</tr>
+	
+	<jstl:forEach items="${averageBudgetOfHelpRequestsByStatus.keySet() }" var="key">
+		<tr>
+			<jstl:set value="${averageBudgetOfHelpRequestsByStatus.get(key) }"
+				var="amount" />
+			<jstl:if test="${amount > 0}">
+				<th scope="row">
+				<acme:message code="learner.dashboard.form.status.average.${key.getFirst()}.${key.getSecond()}" />
+				<td><acme:print value="${ amount }" /></td>
+			</jstl:if>
 		</tr>
-		</jstl:forEach>
-	</table>
+	</jstl:forEach>
 	
-	<acme:message code="learner.learner-dashboard.form.label.deviationTitle"/>		
-	<table class="table table-sm">
-		<caption></caption>
-		
-	<jstl:if test="${empty deviationBudgetByCurrency}">
-	<acme:message code="learner.learner-dashboard.form.label.nohayPeticionesAyuda"/>	
-	<br>
-	<br>
-	</jstl:if>
-		<jstl:forEach items="${deviationBudgetByCurrency}" var="entry"> 
-		<tr>	
-			<th id="">
-				<acme:message code="learner.learner-dashboard.form.label.deviation-sentence"/>		
-				<jstl:set var = "string1" value = "${entry.key}"/>
-				<jstl:set var = "string2" value = "${fn:split(string1, '->')}" />
-				<acme:print value="${string2[0]}"/>
-				<acme:message code="learner.learner-dashboard.form.label.and-status"/>		
-				<acme:print value="${string2[1]}"/>
-				<acme:message code="learner.learner-dashboard.form.label.colon"/>		
-			</th>
-			<td style= "text-align:right;">
-				<acme:print value="${entry.value}"/>
-			</td>		
+	<jstl:forEach items="${deviationBudgetOfHelpRequestsByStatus.keySet() }" var="key">
+		<tr>
+			<jstl:set value="${deviationBudgetOfHelpRequestsByStatus.get(key) }"
+				var="amount" />
+			<jstl:if test="${amount > 0}">
+				<th scope="row">
+				<acme:message code="learner.dashboard.form.status.deviation.${key.getFirst()}.${key.getSecond()}" />
+				<td><acme:print value="${ amount }" /></td>
+			</jstl:if>
 		</tr>
-		</jstl:forEach>
-	</table>
+	</jstl:forEach>
 	
+	<jstl:forEach items="${minimunBudgetOfHelpRequestsByStatus.keySet() }" var="key">
+		<tr>
+			<jstl:set value="${minimunBudgetOfHelpRequestsByStatus.get(key) }"
+				var="amount" />
+			<jstl:if test="${amount > 0}">
+				<th scope="row">
+				<acme:message code="learner.dashboard.form.status.minimum.${key.getFirst()}.${key.getSecond()}" />
+				<td><acme:print value="${ amount }" /></td>
+			</jstl:if>
+		</tr>
+	</jstl:forEach>
 	
-	<acme:message code="learner.learner-dashboard.form.label.minTitle"/>
-	<table class="table table-sm">	
-		<caption></caption>
-	<jstl:if test="${empty minBudgetByCurrency}">
-	<acme:message code="learner.learner-dashboard.form.label.nohayPeticionesAyuda"/>	
-	<br>
-	<br>
-	</jstl:if>
-		<jstl:forEach items="${minBudgetByCurrency}" var="entry"> 
-			<tr>	
-				<th id="">
-					<acme:message code="learner.learner-dashboard.form.label.min-sentence"/>		
-					<jstl:set var = "string1" value = "${entry.key}"/>
-					<jstl:set var = "string2" value = "${fn:split(string1, '->')}" />
-					<acme:print value="${string2[0]}"/>
-					<acme:message code="learner.learner-dashboard.form.label.and-status"/>		
-					<acme:print value="${string2[1]}"/>
-					<acme:message code="learner.learner-dashboard.form.label.colon"/>		
-				</th>
-				<td style= "text-align:right;">
-					<acme:print value="${entry.value}"/>
-				</td>		
-			</tr>
-		</jstl:forEach>
-	</table>		
-	<acme:message code="learner.learner-dashboard.form.label.maxTitle"/>		
-	<table class="table table-sm">	
-		<caption></caption>
-	<jstl:if test="${empty maxBudgetByCurrency}">
-	<acme:message code="learner.learner-dashboard.form.label.nohayPeticionesAyuda"/>	
-	<br>
-	<br>
-	</jstl:if>
-		<jstl:forEach items="${maxBudgetByCurrency}" var="entry"> 
-			<tr>	
-				<th id="">
-					<acme:message code="learner.learner-dashboard.form.label.max-sentence"/>		
-					<jstl:set var = "string1" value = "${entry.key}"/>
-					<jstl:set var = "string2" value = "${fn:split(string1, '->')}" />
-					<acme:print value="${string2[0]}"/>
-					<acme:message code="learner.learner-dashboard.form.label.and-status"/>		
-					<acme:print value="${string2[1]}"/>
-					<acme:message code="learner.learner-dashboard.form.label.colon"/>		
-				</th>
-				<td style= "text-align:right;">
-					<acme:print value="${entry.value}"/>
-				</td>		
-			</tr>
-		</jstl:forEach>
-	</table>
-	<acme:message code="learner.learner-dashboard.form.label.absoluteTitle"/>		
-	<table class="table table-sm">
-		<caption></caption>
-			<tr>	
-				<th id="">
-					<acme:message code="learner.learner-dashboard.form.label.totalNumberOfProposedHelpRequests"/>		
+	<jstl:forEach items="${maximumBudgetOfHelpRequestsByStatus.keySet() }" var="key">
+		<tr>
+			<jstl:set value="${maximumBudgetOfHelpRequestsByStatus.get(key) }"
+				var="amount" />
+			<jstl:if test="${amount > 0}">
+				<th scope="row">
+				<acme:message code="learner.dashboard.form.status.maximum.${key.getFirst()}.${key.getSecond()}" />
+				<td><acme:print value="${ amount }" /></td>
+			</jstl:if>
+		</tr>
+	</jstl:forEach>
+	
+</table>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	function newChart(labels, data, id) {
+	
+		var data = {
+			labels : labels,
+			datasets : [
+				{
+					data : data
+				}
+			]
+		};
+		var options = {
+			scales : {
+				yAxes : [
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 1.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+	
+		var canvas, context;
+	
+		canvas = document.getElementById(id);
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	
+	}
+	
+	var totalHelRequests = {
+			<jstl:forEach items="${totalNumberOfHelpRequestsByStatus}" var="item" varStatus="loop">
+	 	      ${item.key}: '${item.value}' ${not loop.last ? ',' : ''}
+			</jstl:forEach>
+		};
+		newChart(Object.keys(totalHelRequests), Object.values(totalHelRequests), "totalNumberOfHelpRequestsByStatus");
 		
-				</th>
-				<td style= "text-align:right;">
-					<acme:print value="${totalNumberOfProposedHelpRequests}"/>
-				</td>		
-			</tr>
-			<tr>	
-				<th id="">
-					<acme:message code="learner.learner-dashboard.form.label.totalNumberOfAcceptedHelpRequests"/>
-				</th>
-				<td style= "text-align:right;">
-					<acme:print value="${totalNumberOfAcceptedHelpRequests}"/>
-				</td>		
-			</tr>
-			<tr>	
-				<th id="">
-					<acme:message code="learner.learner-dashboard.form.label.totalNumberOfDeniedHelpRequests"/>		
-				</th>
-				<td style= "text-align:right;">
-					<acme:print value="${totalNumberOfDeniedHelpRequests}"/> 
-				</td>		
-			</tr>
-	</table>
+	});
+</script>
+
+<acme:return/>

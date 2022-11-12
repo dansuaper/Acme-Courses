@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.data.util.Pair;
 
+import acme.entities.helpRequests.HelpRequestStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,12 +19,10 @@ public class LearnerDashboard {
 
 	// Attributes -----------------------------------------------------
 	
-	int totalNumberOfProposedHelpRequests;
-	int totalNumberOfAcceptedHelpRequests;
-	int totalNumberOfDeniedHelpRequests;
-	Map<Pair<String,String>,Double> averageBudgetByCurrency;
-	Map<Pair<String,String>,Double> deviationBudgetByCurrency;
-	Map<Pair<String,String>,Double> minBudgetByCurrency;
-	Map<Pair<String,String>,Double> maxBudgetByCurrency;
+	Map<HelpRequestStatus, Integer> totalNumberOfHelpRequestsByStatus;
+	Map<Pair<HelpRequestStatus,String>,Double> averageBudgetOfHelpRequestsByStatus;
+	Map<Pair<HelpRequestStatus,String>,Double> deviationBudgetOfHelpRequestsByStatus;
+	Map<Pair<HelpRequestStatus,String>,Double> minimumBudgetOfHelpRequestsByStatus;
+	Map<Pair<HelpRequestStatus,String>,Double> maximumBudgetOfHelpRequestsByStatus;
 
 }
