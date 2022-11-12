@@ -17,8 +17,6 @@ public class TeacherHelpRequestController extends AbstractController<Teacher, He
 	
 	@Autowired
 	protected TeacherHelpRequestShowService	showService;
-	//		@Autowired 
-	//		protected ChefFineDishListProposedService listPublishedProposedService; 
 
 	@PostConstruct
 	protected void initialise() {
