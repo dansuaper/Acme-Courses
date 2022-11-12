@@ -51,11 +51,13 @@ master.menu.teacher = Profesor
 master.menu.teacher.tutorials = Lista de tutoriales
 master.menu.teacher.courses = Lista de cursos
 master.menu.teacher.help-requests = Lista de peticiones de ayuda
+master.menu.teacher.follow-ups = Lista de seguimientos
 
 # master.menu.learner #############################################################
 
 master.menu.learner = Aprendiz
 master.menu.learner.help-requests = Solicitudes de Ayuda
+master.menu.learner.follow-ups = Seguimientos
 master.menu.learner.learner-dashboard = Panel de Aprendiz
 
 # master.menu.user-account ####################################################

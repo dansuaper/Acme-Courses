@@ -16,5 +16,6 @@
 	<acme:input-textbox code="learner.help-request.form.label.teacher-info" path="teacher.info"/>
 	<acme:input-textbox code="learner.help-request.form.label.teacher-statement" path="teacher.statement"/>
 	
-	<acme:button code="learner.help-request.form.button.follow-up" action="/learner/follow-up/list?id=${id}"/>
+	<acme:button code="learner.help-request.form.button.follow-up" action="/learner/follow-up/listFollowUp?id=${id}"/>
+	
 </acme:form>
