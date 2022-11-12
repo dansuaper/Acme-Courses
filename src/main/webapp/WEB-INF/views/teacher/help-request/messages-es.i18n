@@ -15,3 +15,5 @@ teacher.help-request.form.label.username = Nombre del usuario del profesor
 teacher.help-request.form.label.school = Nombre de la escuela del profesor
 teacher.help-request.form.label.teacher-link = Enlace de información del profesor
 teacher.help-request.form.label.statement = Declaración del profesor
+
+teacher.help-request.form.button.follow-up = Informe de seguimiento 
