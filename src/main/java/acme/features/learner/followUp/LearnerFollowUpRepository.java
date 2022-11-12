@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.followUps.FollowUp;
 import acme.framework.repositories.AbstractRepository;
-import acme.roles.Teacher;
+import acme.roles.Learner;
  
 @Repository 
 public interface LearnerFollowUpRepository extends AbstractRepository { 
@@ -15,8 +15,12 @@ public interface LearnerFollowUpRepository extends AbstractRepository {
 	Collection<FollowUp> findFollowUpsByHelpRequestId(int id); 
 	 
 	@Query("Select l from Learner l where l.userAccount.id = :id")
-	Teacher findTeacherByUserAccountId(int id); 
+	Learner findLearnerByUserAccountId(int id); 
 	
 	@Query("Select f from FollowUp f where f.id = :id") 
-	FollowUp findFollowUpById(int id); 
+	FollowUp findFollowUpById(int id);
+	
+	@Query("Select f from FollowUp f where f.helpRequest.learner.id = :id")
+	Collection<FollowUp> findManyFollowUpsByLearnerId(int id); 
+
 } 

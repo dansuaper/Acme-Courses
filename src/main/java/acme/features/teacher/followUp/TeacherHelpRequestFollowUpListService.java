@@ -11,7 +11,7 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Teacher; 
  
 @Service 
-public class TeacherFollowUpListService implements AbstractListService<Teacher, FollowUp> { 
+public class TeacherHelpRequestFollowUpListService implements AbstractListService<Teacher, FollowUp> { 
 	 
 	@Autowired 
 	protected TeacherFollowUpRepository repository; 
@@ -28,13 +28,11 @@ public class TeacherFollowUpListService implements AbstractListService<Teacher, 
 		assert request != null; 
 		 
 		final Collection<FollowUp> result; 
-		final int UAId = request.getPrincipal().getAccountId();
-		final int teacherId = this.repository.findTeacherByUserAccountId(UAId).getId();
-		
-		result = this.repository.findManyFollowUpsByTeacherId(teacherId);
+		final int helpRequestId = request.getModel().getInteger("id");
+		result = this.repository.findFollowUpsByHelpRequestId(helpRequestId); 
 		
 		return result;
-	}
+	}  
  
 	@Override 
 	public void unbind(final Request<FollowUp> request, final FollowUp entity, final Model model) { 

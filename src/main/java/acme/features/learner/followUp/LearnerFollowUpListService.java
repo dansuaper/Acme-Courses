@@ -28,11 +28,13 @@ public class LearnerFollowUpListService implements AbstractListService<Learner, 
 		assert request != null; 
 		 
 		final Collection<FollowUp> result; 
-		final int helpRequestId = request.getModel().getInteger("id");
-		result = this.repository.findFollowUpsByHelpRequestId(helpRequestId); 
+		final int UAId = request.getPrincipal().getAccountId();
+		final int learnerId = this.repository.findLearnerByUserAccountId(UAId).getId();
+		
+		result = this.repository.findManyFollowUpsByLearnerId(learnerId);
 		
 		return result;
-	} 
+	}
  
 	@Override 
 	public void unbind(final Request<FollowUp> request, final FollowUp entity, final Model model) { 

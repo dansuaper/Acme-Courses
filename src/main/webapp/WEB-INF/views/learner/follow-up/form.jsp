@@ -20,4 +20,5 @@
 	<acme:input-moment code="learner.followUp.form.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:input-textbox code="learner.followUp.form.label.message" path="message"/>
 	<acme:input-textbox code="learner.followUp.form.label.info" path="info"/>
+	
 </acme:form>

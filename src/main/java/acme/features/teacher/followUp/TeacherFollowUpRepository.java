@@ -19,4 +19,7 @@ public interface TeacherFollowUpRepository extends AbstractRepository {
 	
 	@Query("Select f from FollowUp f where f.id = :id") 
 	FollowUp findFollowUpById(int id); 
+
+	@Query("Select f from FollowUp f where f.helpRequest.teacher.id = :id")
+	Collection<FollowUp> findManyFollowUpsByTeacherId(int id); 
 } 

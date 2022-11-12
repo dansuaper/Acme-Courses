@@ -51,10 +51,12 @@
 			<acme:menu-suboption code="master.menu.teacher.tutorials" action="/teacher/tutorial/list" />
 			<acme:menu-suboption code="master.menu.teacher.courses" action="/teacher/course/list" />
 			<acme:menu-suboption code="master.menu.teacher.help-requests" action="/teacher/help-request/list" />
+						<acme:menu-suboption code="master.menu.teacher.follow-ups" action="/teacher/follow-up/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.learner" access="hasRole('Learner')">
 			<acme:menu-suboption code="master.menu.learner.help-requests" action="/learner/help-request/list" />
+			<acme:menu-suboption code="master.menu.learner.follow-ups" action="/learner/follow-up/list" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.learner.learner-dashboard" action="/learner/learner-dashboard/show"/>
 		</acme:menu-option>
