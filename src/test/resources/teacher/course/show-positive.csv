@@ -1,0 +1,3 @@
+recordIndex,ticker,caption,abstract-text,link,published,cost,username
+0,AAA-001,First,Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus tempor lorem et posuere congue dui sem eleifend nunc et faucibus diam risus vel quam. Suspendisse interdum erat id pellentesque scelerisque. Phasellus congue magna in ante aliquam donec.,http://example.com,true,EUR 196.00,teacher1
+1,AAA-004:ABC,Lorem ipsum dolor sit amet consectetur adipiscing elit. Nam vestibulum sed.,This is a course,http://example.com,false,"EUR 2,897,647.47",teacher1

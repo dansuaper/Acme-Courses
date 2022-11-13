@@ -64,7 +64,7 @@ public class TeacherCourseTutorialListService implements AbstractListService<Tea
 		assert entity != null; 
 		assert model != null; 
 		
-		request.unbind(entity, model, "type", "title", "ticker"); 
+		request.unbind(entity, model, "type", "title", "ticker", "teacher.userAccount.username", "cost"); 
 		 
 	}
 
