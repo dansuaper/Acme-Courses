@@ -1,0 +1,5 @@
+courseRecordIndex,ticker,tutorialRecordIndex,type,title,username,tutorialTicker,cost
+0,AAA-001,0,THEORY,Maths,teacher1,AAA-001,EUR 10.00
+0,AAA-001,1,THEORY,Science,teacher1,AAA-002:A,EUR 20.00
+0,AAA-001,2,LAB,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed viverra metus.,teacher1,AAA-002:BB,EUR 8.00
+0,AAA-001,3,LAB,Maths,teacher1,AAA-011:B,EUR 30.00

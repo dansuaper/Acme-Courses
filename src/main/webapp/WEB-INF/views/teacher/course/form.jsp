@@ -7,7 +7,7 @@
 	<acme:input-textbox code="teacher.course.form.label.ticker" path="ticker"/>	
 	<acme:input-textarea code="teacher.course.form.label.caption" path="caption"/>	
 	<acme:input-textarea code="teacher.course.form.label.abstract-text" path="abstractText"/>
-	<acme:input-textbox code="teacher.course.form.label.link" path="Link"/>	
+	<acme:input-textbox code="teacher.course.form.label.link" path="link"/>	
 	<acme:input-textbox code="teacher.course.form.label.published" path="published"/>	
 	<acme:input-textbox code="teacher.course.form.label.cost" path="cost"/>
 	<jstl:if test="${dif == true}">
