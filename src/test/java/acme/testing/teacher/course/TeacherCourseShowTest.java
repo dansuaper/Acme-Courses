@@ -17,7 +17,7 @@ public class TeacherCourseShowTest extends TestHarness {
 	@CsvFileSource(resources = "/teacher/course/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positive(final int recordIndex, final String ticker, final String caption,
-		final String abstractText, final String link, final String published, final String cost, final String username) {
+		final String abstractText, final String link, final String published, final String username) {
 		
 		super.signIn("teacher1", "teacher1");
 		super.clickOnMenu("Teacher", "Courses");
@@ -31,7 +31,6 @@ public class TeacherCourseShowTest extends TestHarness {
 		super.checkInputBoxHasValue("abstractText", abstractText);
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("published", published);
-		super.checkInputBoxHasValue("cost", cost);
 		super.checkInputBoxHasValue("teacher.userAccount.username", username);
 		
 		super.signOut();
