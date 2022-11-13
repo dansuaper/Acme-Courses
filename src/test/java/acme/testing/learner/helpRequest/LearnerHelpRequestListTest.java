@@ -12,30 +12,38 @@ public class LearnerHelpRequestListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/learner/help-request/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positivePatronage(final int recordIndex, final String status, final String ticker, final String statement, final String start_date, 
-		final String end_date, final String info, final String teacher_username, final String teacher_info, final String teacher_statement) {
+	public void positivePatronage(final int recordIndex, final String ticker, final String budget,
+		final String start_date, final String end_date, final String status) {
 		
-		super.signIn("learner5", "learner5");
-		super.clickOnMenu("Learner", "List help requests");
+		super.signIn("learner3", "learner3");
+		super.clickOnMenu("Learner", "Help Requests");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, status);
-		super.checkColumnHasValue(recordIndex, 1, ticker);
-		super.checkColumnHasValue(recordIndex, 2, statement);
-		super.checkColumnHasValue(recordIndex, 3, start_date);
-		super.checkColumnHasValue(recordIndex, 4, end_date);
+		super.checkColumnHasValue(recordIndex, 0, ticker);
+		super.checkColumnHasValue(recordIndex, 1, budget);
+		super.checkColumnHasValue(recordIndex, 2, start_date);
+		super.checkColumnHasValue(recordIndex, 3, end_date);
+		super.checkColumnHasValue(recordIndex, 4, status);
 
 		super.signOut();
 	}
 	
-	
 	@Test
-	@Order(30)
+	@Order(20)
 	public void hackingTest() {
-		super.checkNotLinkExists("Learner");
+		super.checkNotLinkExists("Account");
 		super.navigate("/learner/helpRequest/list");
 		super.checkPanicExists();
+
+		super.signIn("administrator", "administrator");
+		super.navigate("/learner/helpRequest/list");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("learner3", "learner3");
+		super.navigate("/learner/helpRequest/list");
+		super.checkPanicExists();
+		super.signOut();
 	}
-	// Ancillary methods ------------------------------------------------------
 
 }
