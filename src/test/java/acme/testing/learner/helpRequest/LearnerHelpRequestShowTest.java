@@ -46,16 +46,16 @@ public class LearnerHelpRequestShowTest extends TestHarness {
 	@Order(20)
 	public void hackingTest() {
 		super.checkNotLinkExists("Account");
-		super.navigate("/learner/helpRequest/list");
+		super.navigate("/learner/help-request/list");
 		super.checkPanicExists();
 
 		super.signIn("administrator", "administrator");
-		super.navigate("/learner/helpRequest/list");
+		super.navigate("/learner/help-request/list");
 		super.checkPanicExists();
 		super.signOut();
 
-		super.signIn("learner3", "learner3");
-		super.navigate("/learner/helpRequest/list");
+		super.signIn("teacher2", "teacher2");
+		super.navigate("/learner/help-request/list");
 		super.checkPanicExists();
 		super.signOut();
 	}
