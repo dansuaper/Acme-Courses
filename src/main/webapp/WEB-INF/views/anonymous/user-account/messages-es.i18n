@@ -1,0 +1,15 @@
+anonymous.user-account.form.title.create = Registrarse
+
+anonymous.user-account.form.label.username = Apodo:
+anonymous.user-account.form.label.password = Contraseña:
+anonymous.user-account.form.label.confirmation = Confirmación:
+anonymous.user-account.form.label.name = Nombre:
+anonymous.user-account.form.label.surname = Apellidos:
+anonymous.user-account.form.label.email = E-mail:
+anonymous.user-account.form.label.accept = Acepto la licencia
+
+anonymous.user-account.form.button.create = Registrar
+
+anonymous.user-account.form.error.duplicated = Este apodo ya está siendo usado por otro usuario
+anonymous.user-account.form.error.must-accept = Debe aceptar la licencia
+anonymous.user-account.form.error.confirmation-no-match = La confirmación no concuerda

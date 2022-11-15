@@ -1,0 +1,9 @@
+authenticated.teacher.teacher.form.title.create = Conviértete en profesor
+authenticated.teacher.teacher.form.title.update = Actualiza tus datos 
+
+authenticated.teacher.teacher.form.label.school = Escuela
+authenticated.teacher.teacher.form.label.statement = Declaración
+authenticated.teacher.teacher.form.label.info = Información
+
+authenticated.teacher.teacher.form.button.create = Registrar
+authenticated.teacher.teacher.form.button.update = Actualizar

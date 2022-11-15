@@ -1,0 +1,9 @@
+authenticated.learner.learner.form.title.create = Conviértete en aprendiz
+authenticated.learner.learner.form.title.update = Actualiza tus datos 
+
+authenticated.learner.learner.form.label.school = Escuela
+authenticated.learner.learner.form.label.statement = Declaración
+authenticated.learner.learner.form.label.info = Información
+
+authenticated.learner.learner.form.button.create = Registrar
+authenticated.learner.learner.form.button.update = Actualizar
