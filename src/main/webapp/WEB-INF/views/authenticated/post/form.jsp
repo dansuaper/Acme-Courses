@@ -9,4 +9,4 @@
 	<acme:input-textarea code="authenticated.post.form.label.message" path="message"/>
 	<acme:input-textarea code="authenticated.post.form.label.info" path="info"/>	
 	<acme:input-textbox code="authenticated.post.form.label.flag" path="flag"/>
-</acme:form>>
+</acme:form>

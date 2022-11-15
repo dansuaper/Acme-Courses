@@ -1,0 +1,9 @@
+authenticated.learner.learner.form.title.create = Become a learner
+authenticated.learner.learner.form.title.update = Update your learner data 
+
+authenticated.learner.learner.form.label.school = School
+authenticated.learner.learner.form.label.statement = Statement
+authenticated.learner.learner.form.label.info = Info
+
+authenticated.learner.learner.form.button.create = Register
+authenticated.learner.learner.form.button.update = Update
