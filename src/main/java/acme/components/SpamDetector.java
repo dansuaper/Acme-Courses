@@ -12,13 +12,15 @@ public class SpamDetector {
 	public static Boolean isSpam(final String text, final SystemConfiguration systemConfiguration) {
 		boolean result = false;
 
-		final List<String> wordsChecking = SpamDetector.getWords(text);		
+		final List<String> wordsChecking = SpamDetector.getWords(text);
+//		SpamRecord: Map<Término spam, término booster>
 		final Map<String, String> enRecords = SpamDetector.getSpamRecords(systemConfiguration.getSpamRecordsEn());		
 		final Map<String, String> esRecords = SpamDetector.getSpamRecords(systemConfiguration.getSpamRecordsEs());
 		final Map<String, String> spamRecords = new HashMap<>();
 		spamRecords.putAll(enRecords);
 		spamRecords.putAll(esRecords);
 
+//		SpamWord: Map<Término spam, threshold>
 		final Map<String, Double> enWords = SpamDetector.getSpamWords(systemConfiguration.getSpamRecordsEn());		
 		final Map<String, Double> esWords = SpamDetector.getSpamWords(systemConfiguration.getSpamRecordsEs());	
 		final Map<String, Double> spamWords = new HashMap<>();
@@ -74,12 +76,15 @@ public class SpamDetector {
 		
 		for(final String word: words) {
 			
-			if(spamRecords.keySet().contains(word.toLowerCase())) {
+			if(spamRecords.keySet().contains(word.toLowerCase()) && words.contains(spamRecords.get(word.toLowerCase()))) {
 				spamWeight += spamWords.get(word.toLowerCase()) * spamBooster;
-			} else if(spamRecords.keySet().contains(palabraAnterior.toLowerCase() + " " + word.toLowerCase())) {
+			} else if(spamRecords.keySet().contains(palabraAnterior.toLowerCase() + " " + word.toLowerCase())
+				&& words.contains(spamRecords.get(palabraAnterior.toLowerCase() + " " + word.toLowerCase()))) {
 				spamWeight += spamWords.get(palabraAnterior.toLowerCase() + " " + word.toLowerCase()) * spamBooster;
 				palabrasDobles += 1;
-			} else if(spamWords.keySet().contains(word.toLowerCase())){
+			}  
+			
+			if(spamWords.keySet().contains(word.toLowerCase())){
 				spamWeight += spamWords.get(word.toLowerCase());
 			} else if(spamWords.keySet().contains(palabraAnterior.toLowerCase() + " " + word.toLowerCase())) {
 				spamWeight += spamWords.get(palabraAnterior.toLowerCase() + " " + word.toLowerCase());
