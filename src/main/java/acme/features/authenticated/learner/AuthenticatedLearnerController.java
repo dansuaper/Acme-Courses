@@ -19,8 +19,8 @@ public class AuthenticatedLearnerController extends AbstractController<Authentic
 	@Autowired
 	protected AuthenticatedLearnerCreateService	createService;
 
-//	@Autowired
-//	protected AuthenticatedLearnerUpdateService	updateService;
+	@Autowired
+	protected AuthenticatedLearnerUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -28,7 +28,7 @@ public class AuthenticatedLearnerController extends AbstractController<Authentic
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("create", this.createService);
-//		super.addCommand("update", this.updateService);
+		super.addCommand("update", this.updateService);
 	}
 
 }
