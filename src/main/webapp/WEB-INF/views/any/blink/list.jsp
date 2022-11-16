@@ -10,3 +10,5 @@
 	<acme:list-column code="any.blink.list.label.message" path="message" width="20%"/>	
 	<acme:list-column code="any.blink.list.label.email" path="email" width="20%"/>	
 </acme:list>
+
+<acme:button code="any.blink.list.button.create" action="/any/blink/create"/>
