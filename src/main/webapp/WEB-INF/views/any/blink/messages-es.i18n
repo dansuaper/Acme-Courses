@@ -3,3 +3,12 @@ any.blink.list.label.caption = Título
 any.blink.list.label.author-alias = Alias del autor
 any.blink.list.label.message = Mensaje
 any.blink.list.label.email = Email
+
+any.blink.form.label.caption = Título
+any.blink.form.label.author-alias = Alias del autor
+any.blink.form.label.message = Mensaje
+any.blink.form.label.email = Email
+any.blink.form.label.confirmation = Confirmar que el parpadeo es correcto
+any.blink.form.button.create = Crear
+any.blink.list.button.create = Crear
+any.blink.confirmation.error = Por favor, marque la casilla

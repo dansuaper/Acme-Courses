@@ -16,11 +16,15 @@ public class LearnerFollowUpController extends AbstractController<Learner, Follo
 	
 	@Autowired 
 	protected LearnerFollowUpShowService showService; 
+	
+	@Autowired 
+	protected LearnerHelpRequestFollowUpListService followUpListService; 
 	 
 	@PostConstruct 
 	protected void initialise() { 
 		super.addCommand("show", this.showService); 
-		super.addCommand("list", this.listRecentService); 
+		super.addCommand("list", this.listRecentService);
+		super.addCommand("listFollowUp", "list", this.followUpListService);
 	} 
  
 } 

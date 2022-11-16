@@ -3,3 +3,12 @@ any.blink.list.label.caption = Caption
 any.blink.list.label.author-alias = Author alias
 any.blink.list.label.message = Message
 any.blink.list.label.email = Email
+
+any.blink.form.label.caption = Caption
+any.blink.form.label.author-alias = Author alias
+any.blink.form.label.message = Message
+any.blink.form.label.email = Email
+any.blink.form.label.confirmation = Confirm that the blink is correct
+any.blink.form.button.create = Create
+any.blink.list.button.create = Create
+any.blink.confirmation.error = Please, mark the checkbox
