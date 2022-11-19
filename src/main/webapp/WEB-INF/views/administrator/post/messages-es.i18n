@@ -1,0 +1,9 @@
+administrator.post.form.label.caption = Título:
+administrator.post.form.label.message = Mensaje:
+administrator.post.form.label.info = Link de información:
+administrator.post.form.label.flag = Bandera
+administrator.post.form.label.confirmation = Confirmar que la publicación es correcta
+administrator.post.form.button.create = Crear
+
+administrator.post.message.error = El tamaño no puede exceder los 255 caracteres
+administrator.post.confirmation.error = Por favor, marque la casilla
