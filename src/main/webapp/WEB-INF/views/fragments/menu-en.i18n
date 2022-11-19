@@ -51,6 +51,7 @@ master.menu.teacher = Teacher
 master.menu.teacher.tutorials = Tutorials
 master.menu.teacher.courses = Courses
 master.menu.teacher.help-requests = Help requests
+master.menu.teacher.list-proposed-help-requests = List proposed help requests
 master.menu.teacher.follow-ups = Follow ups
 
 # master.menu.learner #############################################################

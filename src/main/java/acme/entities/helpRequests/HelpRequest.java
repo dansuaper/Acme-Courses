@@ -34,6 +34,8 @@ public class HelpRequest extends AbstractEntity{
 
 	protected HelpRequestStatus status;
 	
+	protected boolean published;
+	
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(:[A-Z]{1,10})?$") 

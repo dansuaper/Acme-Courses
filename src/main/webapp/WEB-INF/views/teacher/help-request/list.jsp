@@ -5,8 +5,8 @@
  
 <acme:list> 
 	<acme:list-column code="teacher.help-request.list.label.ticker" path="ticker"/> 
-	<acme:list-column code="teacher.help-request.list.label.startDate" path="startDate"/>	 
-	<acme:list-column code="teacher.help-request.list.label.endDate" path="endDate"/>
+	<acme:list-column code="teacher.help-request.list.label.start-date" path="startDate"/>	 
+	<acme:list-column code="teacher.help-request.list.label.end-date" path="endDate"/>
 	<acme:list-column code="teacher.help-request.list.label.status" path="status"/>
-	<acme:list-column code="teacher.help-request.list.label.info" path="info"/>
+	<acme:list-column code="teacher.help-request.list.label.budget" path="budget"/>
 </acme:list>                                                                                             

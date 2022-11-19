@@ -24,14 +24,14 @@ public class TeacherHelpRequestShowService implements AbstractShowService<Teache
 	public boolean authorise(final Request<HelpRequest> request) {
 		assert request != null;
 		boolean result;
-		final int HelpRequestId;
-		final Teacher teacher;
-		final HelpRequest helpRequest;
+		int helpRequestId;
+		Teacher teacher;
+		HelpRequest helpRequest;
 
-		HelpRequestId = request.getModel().getInteger("id");
-		helpRequest = this.repository.findHelpRequestById(HelpRequestId);
+		helpRequestId = request.getModel().getInteger("id");
+		helpRequest = this.repository.findHelpRequestById(helpRequestId);
 		teacher = this.repository.findTeacherByUserAccountId(request.getPrincipal().getAccountId());
-		result = helpRequest.getTeacher().equals(teacher);
+		result = helpRequest.getTeacher().equals(teacher) && helpRequest.isPublished();
 
 		return result;
 	}
@@ -81,8 +81,8 @@ public class TeacherHelpRequestShowService implements AbstractShowService<Teache
 		model.setAttribute("dif", dif);
 		model.setAttribute("convertir", this.convertir(entity.getBudget()).getTarget());
 		 
-		request.unbind(entity, model, "ticker", "budget", "info", "statement", "startDate", "endDate","status", "teacher.userAccount.username", "teacher.school", "teacher.info", "teacher.statement");	 
+		request.unbind(entity, model, "ticker", "budget", "info", "statement", "startDate", "endDate","status", "learner.userAccount.username", "learner.school", "learner.info", "learner.statement");	 
 		model.setAttribute("confirmation", false); 
-		model.setAttribute("readonly", true); 
+		
 	} 
 }
