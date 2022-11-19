@@ -48,7 +48,7 @@ public class SpamDetector {
 		final Map<String, Double> spamWords = new HashMap<>();
 		
 		for(final String keyValue : spamRecords.split(",")) {
-			final String[] pair = keyValue.replace("("," ").replace(")"," ").replace("'", "").trim().split(":");
+			final String[] pair = keyValue.replace("("," ").replace(")"," ").replace("'", "").trim().split(";");
 			spamWords.put(pair[0], Double.valueOf(pair[1]));
 		}
 
@@ -59,8 +59,8 @@ public class SpamDetector {
 		final Map<String, String> spamWords = new HashMap<>();
 		
 		for(final String keyValue : spamRecords.split(",")) {
-			final String[] tuple = keyValue.replace("("," ").replace(")"," ").replace("'", "").trim().split(":");
-			if(!tuple[2].isEmpty()) {
+			final String[] tuple = keyValue.replace("("," ").replace(")"," ").replace("'", "").trim().split(";");
+			if(!tuple[2].equals("\"")) {
 				spamWords.put(tuple[0], tuple[2]);
 			}
 		}

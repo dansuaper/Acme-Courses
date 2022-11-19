@@ -1,14 +1,25 @@
+teacher.tutorial.list.label.type = Type
+teacher.tutorial.list.label.title = Title
+teacher.tutorial.list.label.ticker = Ticker
+teacher.tutorial.list.label.teacher = Teacher
+teacher.tutorial.list.label.cost = Cost
+
 teacher.tutorial.form.label.type = Type
 teacher.tutorial.form.label.ticker = Ticker
 teacher.tutorial.form.label.title = Title
 teacher.tutorial.form.label.abstract-text = Abstract text
 teacher.tutorial.form.label.info = Info
 teacher.tutorial.form.label.cost = Cost
-teacher.tutorial.form.label.published = Published
+teacher.tutorial.form.label.convertir = Converted retail price
 teacher.tutorial.form.label.teacher = Teacher
 
-teacher.tutorial.list.label.type = Type
-teacher.tutorial.list.label.title = Title
-teacher.tutorial.list.label.ticker = Ticker
-teacher.tutorial.list.label.teacher = Teacher
-teacher.tutorial.list.label.cost = Cost
+teacher.tutorial.form.button.create = Create
+teacher.tutorial.list.button.create = Create tutorial
+teacher.tutorial.form.button.delete = Delete
+teacher.tutorial.form.button.update = Update
+teacher.tutorial.form.button.publish = Publish
+
+teacher.tutorial.form.error.duplicated = This ticker already exists
+teacher.tutorial.form.error.cost-currency-not-accepted = The currency is not accepted
+teacher.tutorial.form.error.spam = This text contains spam words
+teacher.tutorial.form.error.invalid-cost = The amount can't be negative

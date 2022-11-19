@@ -1,3 +1,4 @@
+
 package acme.features.teacher.tutorial;
 
 import javax.annotation.PostConstruct;
@@ -22,11 +23,27 @@ public class TeacherTutorialController extends AbstractController<Teacher, Tutor
 	@Autowired
 	protected TeacherCourseTutorialListService	courseTutorialListService;
 
+	@Autowired
+	protected TeacherTutorialDeleteService		deleteService;
+
+	@Autowired
+	protected TeacherTutorialUpdateService		updateService;
+
+	@Autowired
+	protected TeacherTutorialPublishService		publishService;
+
+	@Autowired
+	protected TeacherTutorialCreateService		createService;
+
+
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.tutorialListMineService);
 		super.addCommand("show", this.tutorialShowService);
 		super.addCommand("listCourseTutorials", "list", this.courseTutorialListService);
+		super.addCommand("delete", this.deleteService);
+		super.addCommand("update", this.updateService);
+		super.addCommand("publish", "update", this.publishService);
+		super.addCommand("create", this.createService);
 	}
-
 }
