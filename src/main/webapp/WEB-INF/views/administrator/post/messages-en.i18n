@@ -1,0 +1,9 @@
+administrator.post.form.label.caption = Caption:
+administrator.post.form.label.message = Message:
+administrator.post.form.label.info = Info:
+administrator.post.form.label.flag = Flag
+administrator.post.form.label.confirmation = Confirm that the post is correct
+administrator.post.form.button.create = Create
+
+administrator.post.message.error = Length cannot exceed 255 characters
+administrator.post.confirmation.error = Please, mark the checkbox
