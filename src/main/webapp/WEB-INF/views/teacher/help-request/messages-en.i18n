@@ -1,19 +1,20 @@
 teacher.help-request.list.label.ticker = Ticker
-teacher.help-request.list.label.startDate = Start date
-teacher.help-request.list.label.endDate = End date
-teacher.help-request.list.label.info = Info link
+teacher.help-request.list.label.start-date = Start date
+teacher.help-request.list.label.end-date = End date
 teacher.help-request.list.label.status = Status
+teacher.help-request.list.label.budget = Budget
 
 teacher.help-request.form.label.ticker = Ticker
-teacher.help-request.form.label.startDate = Start date
-teacher.help-request.form.label.endDate = End date
+teacher.help-request.form.label.start-date = Start date
+teacher.help-request.form.label.end-date = End date
 teacher.help-request.form.label.budget = Budget
 teacher.help-request.form.label.convertir = Converted Budget
 teacher.help-request.form.label.info = Info link
 teacher.help-request.form.label.status = Status
-teacher.help-request.form.label.username = Teacher's username
-teacher.help-request.form.label.school = Teacher's school
-teacher.help-request.form.label.teacher-link = Teacher's info link
-teacher.help-request.form.label.statement = Teacher's statement
+teacher.help-request.form.label.username = Learner's username
+teacher.help-request.form.label.school = Learner's school
+teacher.help-request.form.label.teacher-link = Learner's info link
+teacher.help-request.form.label.statement = Learner's statement
 
-teacher.help-request.form.button.follow-up = Follow ups
+master.menu.learner.create-follow-ups = Create follow up
+teacher.help-request.form.button.update = Update status
