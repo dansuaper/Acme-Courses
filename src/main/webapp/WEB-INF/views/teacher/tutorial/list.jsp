@@ -9,5 +9,6 @@
 	<acme:list-column code="teacher.tutorial.list.label.teacher" path="teacher.userAccount.username" width="20%"/>
 	<acme:list-column code="teacher.tutorial.list.label.ticker" path="ticker" width="20%"/>	
 	<acme:list-column code="teacher.tutorial.list.label.cost" path="cost" width="20%"/>
-	
 </acme:list>
+
+<acme:button code="teacher.tutorial.list.button.create" action="/teacher/tutorial/create"/>

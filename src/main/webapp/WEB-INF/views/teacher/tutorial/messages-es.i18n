@@ -1,14 +1,25 @@
+teacher.tutorial.list.label.type = Tipo
+teacher.tutorial.list.label.title = Título
+teacher.tutorial.list.label.ticker = Código
+teacher.tutorial.list.label.teacher = Profesor
+teacher.tutorial.list.label.cost = Precio
+
 teacher.tutorial.form.label.type = Tipo
 teacher.tutorial.form.label.ticker = Teletipo
 teacher.tutorial.form.label.title = Título
 teacher.tutorial.form.label.abstract-text = Texto abstracto
 teacher.tutorial.form.label.info = Info
 teacher.tutorial.form.label.cost = Precio
-teacher.tutorial.form.label.published = Publicado
+teacher.tutorial.form.label.convertir = Precio convertido
 teacher.tutorial.form.label.teacher = Profesor
 
-teacher.tutorial.list.label.type = Tipo
-teacher.tutorial.list.label.title = Título
-teacher.tutorial.list.label.ticker = Teletipo
-teacher.tutorial.list.label.teacher = Profesor
-teacher.tutorial.list.label.cost = Precio
+teacher.tutorial.form.button.create = Crear
+teacher.tutorial.list.button.create = Crear tutorial
+teacher.tutorial.form.button.delete = Eliminar
+teacher.tutorial.form.button.update = Actualizar
+teacher.tutorial.form.button.publish = Publicar
+
+teacher.tutorial.form.error.duplicated = Este código ya existe
+teacher.tutorial.form.error.cost-currency-not-accepted = La conversión no ha sido aceptada
+teacher.tutorial.form.error.spam = Este texto contiene términos spam
+teacher.tutorial.form.error.invalid-cost = La cantidad no puede ser negativa
