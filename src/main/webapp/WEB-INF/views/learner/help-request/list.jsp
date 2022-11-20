@@ -9,5 +9,5 @@
 	<acme:list-column code="learner.help-request.list.label.start-date" path="startDate"/>	 
 	<acme:list-column code="learner.help-request.list.label.end-date" path="endDate"/>
 	<acme:list-column code="learner.help-request.list.label.status" path="status"/>
-	 
 </acme:list>   
+<acme:button code="learner.help-request.list.create" action="/learner/help-request/create"/>  
