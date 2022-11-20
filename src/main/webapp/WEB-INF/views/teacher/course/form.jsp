@@ -25,8 +25,8 @@
 		<jstl:when test="${command == 'create'}">
 			<acme:submit code="teacher.course.form.button.create" action="/teacher/course/create"/>
 		</jstl:when>
-		<jstl:when test="${command != 'create'}">
-			<acme:button code="teacher.course.form.button.tutorials" action="/teacher/tutorial/listCourseTutorials?id=${id}"/>
-		</jstl:when>
 	</jstl:choose>
+	<jstl:if test="${command != 'create'}">
+		<acme:button code="teacher.course.form.button.tutorials" action="/teacher/quantity/list?id=${id}"/>
+	</jstl:if>
 </acme:form>

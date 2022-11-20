@@ -16,23 +16,16 @@
 		<acme:input-money code="teacher.tutorial.form.label.convertir" path="convertir" readonly="true"/>
 	</jstl:if>
 	<acme:input-url code="teacher.tutorial.form.label.info" path="info"/>	
-	<acme:input-textbox code="teacher.tutorial.form.label.teacher" path="teacher.userAccount.username"/>
-	
+	<acme:input-textbox code="teacher.tutorial.form.label.teacher" path="teacher.userAccount.username" readonly="true"/>
 	<jstl:choose>
 		<jstl:when
 			test="${acme:anyOf(command, 'show, update, delete, publish') && published == false}">
-			<acme:input-textbox code="teacher.tutorial.form.label.teacher"
-				path="teacher.userAccount.username" readonly="true" />
-			<acme:submit code="teacher.tutorial.form.button.delete"
-				action="/teacher/tutorial/delete" />
-			<acme:submit code="teacher.tutorial.form.button.update"
-				action="/teacher/tutorial/update" />
-			<acme:submit code="teacher.tutorial.form.button.publish"
-				action="/teacher/tutorial/publish" />
+			<acme:submit code="teacher.tutorial.form.button.delete" action="/teacher/tutorial/delete" />
+			<acme:submit code="teacher.tutorial.form.button.update" action="/teacher/tutorial/update" />
+			<acme:submit code="teacher.tutorial.form.button.publish" action="/teacher/tutorial/publish" />
 		</jstl:when>
 		<jstl:when test="${command == 'create'}">
-			<acme:submit code="teacher.tutorial.form.button.create"
-				action="/teacher/tutorial/create" />
+			<acme:submit code="teacher.tutorial.form.button.create" action="/teacher/tutorial/create" />
 		</jstl:when>
 	</jstl:choose>
 </acme:form>

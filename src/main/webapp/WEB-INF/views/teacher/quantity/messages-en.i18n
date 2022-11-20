@@ -1,0 +1,22 @@
+teacher.quantity.list.label.type = Type
+teacher.quantity.list.label.caption = Caption
+teacher.quantity.list.label.cost = Cost
+teacher.quantity.list.label.amount = Amount
+teacher.quantity.list.label.time-unit = Time Unit
+
+teacher.quantity.form.label.amount = Amount
+teacher.quantity.form.label.time-unit = Time Unit
+teacher.tutorial.form.label.type = Type
+teacher.tutorial.form.label.title = Title
+teacher.tutorial.form.label.ticker = Tutorial ticker
+teacher.tutorial.form.label.cost = Cost
+teacher.tutorial.form.label.convertir = Converted cost
+teacher.course.form.label.ticker = Course ticker
+teacher.quantity.form.label.tutorial = Select tutorial
+
+teacher.quantity.list.button.create = Create
+teacher.quantity.form.button.create = Create
+teacher.quantity.form.button.update = Update
+teacher.quantity.form.button.delete = Delete
+
+teacher.quantity.form.error.null = Select a tutorial
