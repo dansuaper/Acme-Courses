@@ -9,3 +9,5 @@
 	<acme:list-column code="teacher.course.list.label.link" path="link"/>
 	<acme:list-column code="teacher.course.list.label.teacher" path="teacher.userAccount.username"/>
 </acme:list>
+
+<acme:button code="teacher.course.list.button.create" action="/teacher/course/create"/>

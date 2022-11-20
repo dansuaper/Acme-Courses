@@ -1,4 +1,4 @@
-teacher.course.list.label.ticker= Ticker
+teacher.course.list.label.ticker = Ticker
 teacher.course.list.label.caption = Caption
 teacher.course.list.label.link = Link
 teacher.course.list.label.teacher = Teacher
@@ -12,3 +12,14 @@ teacher.course.form.label.cost = Cost
 teacher.course.form.label.convertir = Converted cost
 teacher.course.form.button.tutorials = Tutorials
 teacher.course.form.label.published = Published
+
+teacher.course.form.button.delete = Delete
+teacher.course.form.button.create= Create
+teacher.course.form.button.update = Update
+teacher.course.form.button.publish = Publish
+teacher.course.list.button.create = Create course
+
+teacher.course.form.error.duplicated = This ticker already exists
+teacher.course.form.error.no-tutorials = No tutorials assigned
+teacher.course.form.error.no-tutorials-published = Missing tutorials to be published
+teacher.course.form.error.spam = This text contains spam words

@@ -86,10 +86,10 @@ public class TeacherTutorialCreateService implements AbstractCreateService<Teach
 		final Money cost = entity.getCost();
 		
 		if (!errors.hasErrors("title")) {
-			errors.state(request, SpamDetector.isSpam(entity.getTitle(), this.scRepository.findSystemConfiguration()), "title", "teacher.tutorial.form.error.spam");
+			errors.state(request, !SpamDetector.isSpam(entity.getTitle(), this.scRepository.findSystemConfiguration()), "title", "teacher.tutorial.form.error.spam");
 	    }
 		if (!errors.hasErrors("abstractText")) {
-	        errors.state(request, SpamDetector.isSpam(entity.getAbstractText(), this.scRepository.findSystemConfiguration()), "abstractText", "teacher.tutorial.form.error.spam");
+	        errors.state(request, !SpamDetector.isSpam(entity.getAbstractText(), this.scRepository.findSystemConfiguration()), "abstractText", "teacher.tutorial.form.error.spam");
 	    }
 		
 		if (!errors.hasErrors("ticker")) {

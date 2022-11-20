@@ -1,28 +1,25 @@
-chef.recipe.list.label.code = Código
-chef.recipe.list.label.heading = Título
-chef.recipe.list.label.link = Enlace
-any.recipe.list.label.chef = Chef
+teacher.course.list.label.ticker = Código
+teacher.course.list.label.caption = Título
+teacher.course.list.label.link = Link
+teacher.course.list.label.teacher = Profesor
 
-chef.recipe.form.label.code = Código:
-chef.recipe.form.label.description = Descripción:
-chef.recipe.form.label.preparation-notes = Notas de preparación:
-chef.recipe.form.label.link = Enlace:
-chef.recipe.form.label.chef = Chef:
-chef.recipe.form.label.retail-price = Precio al por menor
-chef.recipe.form.label.convertir = Precio convertido
-chef.recipe.form.button.elements = Elementos
-chef.recipe.form.label.published = Publicado
+teacher.course.form.label.ticker = Código
+teacher.course.form.label.caption = Título
+teacher.course.form.label.abstract-text = Texto
+teacher.course.form.label.link = Link
+teacher.course.form.label.teacher = Profesor
+teacher.course.form.label.cost = Coste
+teacher.course.form.label.convertir = Coste convertido
+teacher.course.form.button.tutorials = Tutoriales
+teacher.course.form.label.published = Publicado
 
-chef.recipe.form.button.delete = Borrar
-chef.recipe.form.button.create= Crear
-chef.recipe.form.button.update = Actualizar
-chef.recipe.form.button.publish = Publicar
+teacher.course.form.button.delete = Eliminar
+teacher.course.form.button.create= Crear
+teacher.course.form.button.update = Actualizar
+teacher.course.form.button.publish = Publicar
+teacher.course.list.button.create = Crear curso
 
-chef.recipe.list.button.create = Crear
-
-chef.recipe.form.error.duplicated = Este código ya existe
-chef.recipe.form.error.no-items = Ningún elemento asignado
-chef.recipe.form.error.no-items-published = Faltan elementos por publicar
-chef.recipe.form.error.no-ingredient = No hay ingredientes asignados
-chef.recipe.form.error.no-kitchen-utensil = No hay utensilios de cocina asignados
-chef.recipe.form.error.only-one-kitchen-utensil = Hay mas de un utensilio de cocina asignado, se requiere unicamente uno
+teacher.course.form.error.duplicated = Este código ya existe
+teacher.course.form.error.no-tutorials = No se han asignado tutoriales
+teacher.course.form.error.no-tutorials-published = Los tutoriales deben estar publicados
+teacher.course.form.error.spam = El texto contiene términos spam
