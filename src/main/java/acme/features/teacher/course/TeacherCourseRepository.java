@@ -35,4 +35,13 @@ public interface TeacherCourseRepository extends AbstractRepository{
 	
 	@Query("select m from MoneyExchange m where m.source.currency = :currency and m.source.amount = :amount and m.target.currency = :systemCurrency")
 	MoneyExchange findMoneyExchange(String currency, Double amount, String systemCurrency);
+	
+//	@Query("select count (q.element) from Quantity q where q.element.type = acme.entities.elements.ElementType.INGREDIENT and q.recipe.id = :recipeId")
+//	Integer findNumIngredientsOfRecipe(int courseId);
+	
+	@Query("select q from Quantity q where q.id = :id")
+	Quantity findOneQuantityById(int id);
+	
+	@Query("select c from Course c where c.ticker = :ticker")
+	Course findOneCourseByTicker(String ticker);
 }
