@@ -11,19 +11,33 @@ import acme.roles.Learner;
  
 @Controller 
 public class LearnerHelpRequestController extends AbstractController<Learner, HelpRequest> { 
-	//Internal State 
-	 
+
 	@Autowired 
 	protected LearnerHelpRequestListService listRecentService; 
+	
 	@Autowired 
 	protected LearnerHelpRequestShowService showService; 
 	 
-	 
-	//Constructors 
+	@Autowired 
+	protected LearnerHelpRequestCreateService createService; 
+	
+	@Autowired 
+	protected LearnerHelpRequestDeleteService deleteService; 
+	
+	@Autowired 
+	protected LearnerHelpRequestPublishService publishService; 
+	
+	@Autowired 
+	protected LearnerHelpRequestUpdateService updateService; 
+	
 	@PostConstruct 
 	protected void initialise() { 
 		super.addCommand("show", this.showService); 
 		super.addCommand("list", this.listRecentService); 
+		super.addCommand("create", this.createService);
+		super.addCommand("delete", this.deleteService); 
+		super.addCommand("publish", this.publishService); 
+		super.addCommand("update", this.updateService);
 	} 
  
 } 
