@@ -1,8 +1,11 @@
+learner.followUp.list.label.sequenceNumber = Sequence number
+learner.followUp.list.label.instantiationMoment = Instantiation moment
+learner.followUp.list.label.info = Info
+
 learner.followUp.form.label.sequenceNumber = Sequence number
 learner.followUp.form.label.instantiationMoment = Instantiation moment
 learner.followUp.form.label.message = Message
 learner.followUp.form.label.info = Info
-
-learner.followUp.list.label.sequenceNumber = Sequence number
-learner.followUp.list.label.instantiationMoment = Instantiation moment
-learner.followUp.list.label.info = Info
+learner.followUp.form.label.confirmation = Confirmation
+learner.followUp.list.button.create = Create
+learner.followUp.confirmation.error. = You have to confirm

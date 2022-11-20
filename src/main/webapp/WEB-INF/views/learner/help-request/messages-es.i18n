@@ -1,8 +1,15 @@
+learner.help-request.list.label.ticker = Teletipo
+learner.help-request.list.label.budget = Precio
+learner.help-request.list.label.start-date = Fecha Comienzo
+learner.help-request.list.label.end-date = Fecha Fin
+learner.help-request.list.label.status = Estado
+
 learner.help-request.form.label.ticker = Teletipo
 learner.help-request.form.label.start-date = Fecha Comienzo
 learner.help-request.form.label.end-date = Fecha Fin
 learner.help-request.form.label.statement = Declaración 
 learner.help-request.form.label.budget = Precio
+learner.help-request.form.label.convertir = Precio convertido
 learner.help-request.form.label.info = Información
 learner.help-request.form.label.status = Estado
 learner.help-request.form.label.teacher-username = Nombre Usuario Profesor
@@ -10,10 +17,8 @@ learner.help-request.form.label.teacher-school = Escuela Profesor
 learner.help-request.form.label.teacher-info = Información Profesor
 learner.help-request.form.label.teacher-statement = Declaración Profesor
 
-learner.help-request.list.label.ticker = Teletipo
-learner.help-request.list.label.budget = Precio
-learner.help-request.list.label.start-date = Fecha Comienzo
-learner.help-request.list.label.end-date = Fecha Fin
-learner.help-request.list.label.status = Estado
-
 learner.help-request.form.button.follow-up = Informes de seguimiento
+learner.help-request.form.button.create = Crear
+learner.help-request.form.button.delete = Eliminar
+learner.help-request.form.button.publish = Publicar
+learner.help-request.form.button.update = Actualizar

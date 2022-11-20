@@ -11,7 +11,7 @@
 	<acme:input-money code="learner.help-request.form.label.budget" path="budget"/>
 	<jstl:if test="${command != 'create'}">
 		<jstl:if test="${differentCurrency == true}">
-			<acme:input-money code="learner.help-request.form.label.conversion" path="conversion" readonly="true"/>
+			<acme:input-money code="learner.help-request.form.label.convertir" path="convertir" readonly="true"/>
 		</jstl:if>
 	<acme:input-textbox code="learner.help-request.form.label.status" path="status" readonly="true"/>
 	</jstl:if>
