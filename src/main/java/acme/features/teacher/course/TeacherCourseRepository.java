@@ -2,6 +2,7 @@ package acme.features.teacher.course;
 
 import java.util.Collection;
 
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -44,4 +45,13 @@ public interface TeacherCourseRepository extends AbstractRepository{
 	
 	@Query("select c from Course c where c.ticker = :ticker")
 	Course findOneCourseByTicker(String ticker);
+	
+	@Query("select q.course from Quantity q where q.id = :id")
+	Course findCourseByQuantityId(int id);
+
+	@Query("select t from Tutorial t where t.id = :id")
+	Tutorial findTutorialById(int id);
+	
+	@Query("select t from Tutorial t where t.published = true and t not in (select q.tutorial from Quantity q where q.course.id = :courseId)")
+	Collection<Item> findAssignableTutorials(int courseId);
 }
