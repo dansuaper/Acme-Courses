@@ -19,13 +19,16 @@ public class TeacherFollowUpController extends AbstractController<Teacher, Follo
 	
 	@Autowired
 	protected TeacherHelpRequestFollowUpListService followUpListService;
+	
+	@Autowired
+	protected TeacherFollowUpCreateService	createService;
 	 
 	@PostConstruct 
 	protected void initialise() { 
 		super.addCommand("show", this.showService); 
 		super.addCommand("list", this.listRecentService); 
 		super.addCommand("listFollowUp", "list", this.followUpListService); 
-		
+		super.addCommand("create", this.createService);
 	} 
  
 } 

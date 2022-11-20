@@ -16,8 +16,17 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:input-textbox code="teacher.followUp.form.label.sequenceNumber" path="sequenceNumber"/>
-	<acme:input-moment code="teacher.followUp.form.label.instantiationMoment" path="instantiationMoment"/>
-	<acme:input-textbox code="teacher.followUp.form.label.message" path="message"/>
+	<jstl:if test="${command !='create'}">
+		<acme:input-textbox code="teacher.followUp.form.label.sequenceNumber" path="sequenceNumber"/>
+		<acme:input-moment code="teacher.followUp.form.label.instantiationMoment" path="instantiationMoment"/>
+	</jstl:if>
+	
+	<acme:input-textarea code="teacher.followUp.form.label.message" path="message"/>
 	<acme:input-textbox code="teacher.followUp.form.label.info" path="info"/>
+	
+	<jstl:if test="${command == 'create'}">
+		<acme:input-checkbox code="teacher.followUp.form.label.confirmation" path="confirmation"/>
+	</jstl:if>
+	
+	<acme:submit test="${command == 'create' && status == 'ACCEPTED'}" code="teacher.followUp.list.button.create" action="/teacher/follow-up/create?helpRequestId=${helpRequestId}"/>
 </acme:form>
