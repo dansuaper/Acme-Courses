@@ -12,4 +12,7 @@
 	<acme:input-textbox code="administrator.systemConfiguration.form.label.spam-booster" path="spamBooster"/>
 	<acme:input-textbox code="administrator.systemConfiguration.form.label.money-exchange-name" path="moneyExchangeName"/>
 	<acme:input-url code="administrator.systemConfiguration.form.label.money-exchange-link" path="moneyExchangeLink"/>
+	
+	<acme:submit code="administrator.systemconfiguration.form.button.update" action = "/administrator/system-configuration/update"/>
+	
 </acme:form>
