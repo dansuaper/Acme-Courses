@@ -6,3 +6,6 @@ administrator.systemConfiguration.form.label.spam-threshold = Spam threshold
 administrator.systemConfiguration.form.label.spam-booster = Spam booster
 administrator.systemConfiguration.form.label.money-exchange-name = Money exchange
 administrator.systemConfiguration.form.label.money-exchange-link = Money exchange link
+
+administrator.systemconfiguration.form.button.update = Update
+administrator.system-configuration.form.error.system-currency-not-accepted = The currency is not accepted

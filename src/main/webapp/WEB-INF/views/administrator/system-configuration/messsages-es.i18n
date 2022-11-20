@@ -6,3 +6,7 @@ administrator.systemConfiguration.form.label.spam-threshold = Valor límite spam
 administrator.systemConfiguration.form.label.spam-booster = Valor boost spam
 administrator.systemConfiguration.form.label.money-exchange-name = Conversor de monedas
 administrator.systemConfiguration.form.label.money-exchange-link = Enlace al conversor
+
+administrator.systemconfiguration.form.button.update = Actualizar
+administrator.system-configuration.form.error.system-currency-not-accepted = La moneda no está aceptada
+

@@ -41,7 +41,5 @@ public class AdministratorSystemConfigurationShowService implements AbstractShow
 		request.unbind(entity, model, "acceptedCurrencies", "systemCurrency", "spamRecordsEs", "spamRecordsEn", 
 			"spamThreshold", "spamBooster", "moneyExchangeName", "moneyExchangeLink");
 		
-		model.setAttribute("confirmation", false);
-        model.setAttribute("readonly", true);
 	}
 }
