@@ -1,4 +1,5 @@
 teacher.help-request.list.label.ticker = Código
+teacher.help-request.list.label.statement = Declaración
 teacher.help-request.list.label.start-date = Fecha de inicio
 teacher.help-request.list.label.end-date = Fecha de fin
 teacher.help-request.list.label.status = Estado

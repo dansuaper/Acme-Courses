@@ -7,6 +7,7 @@
 	<acme:input-textbox code="teacher.help-request.form.label.ticker" path="ticker" readonly="true"/>
 	<acme:input-moment code="teacher.help-request.form.label.start-date" path="startDate" readonly="true"/>
 	<acme:input-moment code="teacher.help-request.form.label.end-date" path="endDate" readonly="true"/>
+	<acme:input-textbox code="teacher.help-request.form.label.statement" path="statement" readonly="true"/>
 	<acme:input-money code="teacher.help-request.form.label.budget" path="budget" readonly="true"/>
 	<jstl:if test="${dif == true}">
 		<acme:input-money code="teacher.help-request.form.label.convertir" path="convertir" readonly="true"/>
@@ -24,14 +25,13 @@
 		</acme:input-select>		
 	</jstl:if>
 	
-	
 	<acme:input-textbox code="teacher.help-request.form.label.username" path="learner.userAccount.username" readonly="true"/>
 	<acme:input-textbox code="teacher.help-request.form.label.school" path="learner.school" readonly="true"/>
 	<acme:input-textbox code="teacher.help-request.form.label.teacher-link" path="learner.info" readonly="true"/>
 	<acme:input-textbox code="teacher.help-request.form.label.statement" path="learner.statement" readonly="true"/>
 	<jstl:if test="${status == 'ACCEPTED'}">	
-	<acme:button code="master.menu.learner.create-follow-ups" action="/teacher/followUp/create?helpRequestId=${id}"/>
+	<acme:button code="master.menu.learner.follow-ups-create" action="/teacher/follow-up/create?helpRequestId=${helpRequestId}"/>
 	</jstl:if>
 	
-	<acme:submit test="${command == 'show' && status == 'PROPOSED'}" code="teacher.help-request.form.button.update" action="/teacher/helpRequest/update"/>
+	<acme:submit test="${command == 'show' && status == 'PROPOSED'}" code="teacher.help-request.form.button.update" action="/teacher/help-request/update"/>
 </acme:form>

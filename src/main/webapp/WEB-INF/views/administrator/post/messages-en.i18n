@@ -7,3 +7,4 @@ administrator.post.form.button.create = Create
 
 administrator.post.message.error = Length cannot exceed 255 characters
 administrator.post.confirmation.error = Please, mark the checkbox
+administrator.post.form.error.spam = This text contains spam words

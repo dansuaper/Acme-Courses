@@ -78,10 +78,10 @@ public class AdministratorPostCreateService implements AbstractCreateService<Adm
 		boolean confirmation;
 		
 		if (!errors.hasErrors("caption")) {
-            errors.state(request, SpamDetector.isSpam(entity.getCaption(), this.scRepository.findSystemConfiguration()), "caption", "form.error.spam");
+            errors.state(request, !SpamDetector.isSpam(entity.getCaption(), this.scRepository.findSystemConfiguration()), "caption", "administrator.post.form.error.spam");
         }
 		if (!errors.hasErrors("message")) {
-            errors.state(request, SpamDetector.isSpam(entity.getMessage(), this.scRepository.findSystemConfiguration()), "message", "form.error.spam");
+            errors.state(request, !SpamDetector.isSpam(entity.getMessage(), this.scRepository.findSystemConfiguration()), "message", "administrator.post.form.error.spam");
         }
 	
 		confirmation = request.getModel().getBoolean("confirmation");

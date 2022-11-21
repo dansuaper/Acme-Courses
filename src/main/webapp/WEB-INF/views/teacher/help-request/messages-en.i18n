@@ -1,4 +1,5 @@
 teacher.help-request.list.label.ticker = Ticker
+teacher.help-request.list.label.statement = Statement
 teacher.help-request.list.label.start-date = Start date
 teacher.help-request.list.label.end-date = End date
 teacher.help-request.list.label.status = Status

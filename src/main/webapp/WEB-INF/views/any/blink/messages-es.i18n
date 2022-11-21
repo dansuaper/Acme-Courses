@@ -12,3 +12,4 @@ any.blink.form.label.confirmation = Confirmar que el parpadeo es correcto
 any.blink.form.button.create = Crear
 any.blink.list.button.create = Crear
 any.blink.confirmation.error = Por favor, marque la casilla
+any.blink.form.error.spam = Este texto contiene términos spam

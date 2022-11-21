@@ -12,3 +12,4 @@ any.blink.form.label.confirmation = Confirm that the blink is correct
 any.blink.form.button.create = Create
 any.blink.list.button.create = Create
 any.blink.confirmation.error = Please, mark the checkbox
+any.blink.form.error.spam = This text contains spam words

@@ -7,3 +7,4 @@ administrator.post.form.button.create = Crear
 
 administrator.post.message.error = El tamaño no puede exceder los 255 caracteres
 administrator.post.confirmation.error = Por favor, marque la casilla
+administrator.post.form.error.spam = Este texto contiene términos spam

@@ -78,17 +78,17 @@ public class AnyBlinkCreateService implements AbstractCreateService<Any, Blink> 
 
 		boolean confirmation;
 		if (!errors.hasErrors("caption")) { 
-            errors.state(request, SpamDetector.isSpam(entity.getCaption(), this.scRepository.findSystemConfiguration()), "caption", "form.error.spam");
+            errors.state(request, !SpamDetector.isSpam(entity.getCaption(), this.scRepository.findSystemConfiguration()), "caption", "any.blink.form.error.spam");
         }
 		if (!errors.hasErrors("message")) {
-            errors.state(request, SpamDetector.isSpam(entity.getMessage(), this.scRepository.findSystemConfiguration()),"message", "form.error.spam");
+            errors.state(request, !SpamDetector.isSpam(entity.getMessage(), this.scRepository.findSystemConfiguration()),"message", "any.blink.form.error.spam");
         }
 		if (!errors.hasErrors("authorAlias")) {
-            errors.state(request, SpamDetector.isSpam(entity.getAuthorAlias(), this.scRepository.findSystemConfiguration()), "authorAlias", "form.error.spam");
+            errors.state(request, !SpamDetector.isSpam(entity.getAuthorAlias(), this.scRepository.findSystemConfiguration()), "authorAlias", "any.blink.form.error.spam");
         }
 		
 		confirmation = request.getModel().getBoolean("confirmation");
-		errors.state(request, confirmation, "confirmation", "any.Blink.confirmation.error");
+		errors.state(request, confirmation, "confirmation", "any.blink.confirmation.error");
 		
 	}
 
