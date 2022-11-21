@@ -28,7 +28,7 @@ public class TeacherFollowUpCreateService implements AbstractCreateService<Teach
 		int masterId;
 		HelpRequest helpRequest;
 
-		masterId = request.getModel().getInteger("masterId");
+		masterId = request.getModel().getInteger("helpRequestId");
 		helpRequest = this.repository.findOneHelpRequestById(masterId);
 		result = (helpRequest != null && helpRequest.isPublished() && request.isPrincipal(helpRequest.getTeacher()));
 
@@ -53,9 +53,9 @@ public class TeacherFollowUpCreateService implements AbstractCreateService<Teach
 		model.setAttribute("confirmation", false); 
 		model.setAttribute("readonly", false); 
 		model.setAttribute("status", entity.getHelpRequest().getStatus());
-		model.setAttribute("masterId", entity.getHelpRequest().getId());
+		model.setAttribute("helpRequestId", entity.getHelpRequest().getId());
 		
-		request.unbind(entity, model, "instantationMoment", "sequenceNumber", "message", "info");	
+		request.unbind(entity, model, "instantiationMoment", "sequenceNumber", "message", "info");	
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class TeacherFollowUpCreateService implements AbstractCreateService<Teach
 		HelpRequest helpRequest;
 		String sequenceNumber = "";
 		
-		masterId = request.getModel().getInteger("masterId");
+		masterId = request.getModel().getInteger("helpRequestId");
 		helpRequest = this.repository.findOneHelpRequestById(masterId);
 		
 		final Integer numHelpRequest = this.repository.numOfFollowUpsByHelpRequest(helpRequest.getTicker())+1;

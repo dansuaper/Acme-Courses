@@ -8,4 +8,4 @@ teacher.followUp.form.label.message = Message
 teacher.followUp.form.label.info = Info
 teacher.followUp.form.label.confirmation = Confirmation
 teacher.followUp.list.button.create = Create
-teacher.followUp.confirmation.error. = You have to confirm
+teacher.follow-up.confirmation.error = You have to confirm

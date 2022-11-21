@@ -29,9 +29,9 @@
 	<acme:input-textbox code="teacher.help-request.form.label.school" path="learner.school" readonly="true"/>
 	<acme:input-textbox code="teacher.help-request.form.label.teacher-link" path="learner.info" readonly="true"/>
 	<acme:input-textbox code="teacher.help-request.form.label.statement" path="learner.statement" readonly="true"/>
+	<acme:button code="teacher.help-request.form.button.follow-up" action="/teacher/follow-up/listFollowUp?id=${id}"/>
 	<jstl:if test="${status == 'ACCEPTED'}">	
-	<acme:button code="master.menu.learner.follow-ups-create" action="/teacher/follow-up/create?helpRequestId=${helpRequestId}"/>
+	<acme:button code="teacher.follow-up.button.create" action="/teacher/follow-up/create?helpRequestId=${id}"/>
 	</jstl:if>
-	
 	<acme:submit test="${command == 'show' && status == 'PROPOSED'}" code="teacher.help-request.form.button.update" action="/teacher/help-request/update"/>
 </acme:form>

@@ -12,9 +12,9 @@ import acme.roles.Teacher;
 
 @Repository
 public interface TeacherHelpRequestRepository extends AbstractRepository {
-	
-	@Query("Select h from HelpRequest h where h.teacher.id = :id and h.published = :published and (h.status = 'ACCEPTED' or h.status = 'DENIED')")
-	Collection<HelpRequest> findPublishedAcceptedOrDeniedHelpRequestsByTeacherId(int id, boolean published); 
+		
+	@Query("Select h from HelpRequest h where h.teacher.id = :id and h.published = true")
+	Collection<HelpRequest> findPublishedHelpRequestsByTeacherId(int id); 
 	
 	@Query("Select h from HelpRequest h where h.teacher.id = :id and h.published = :published and h.status = 'PROPOSED'") 
 	Collection<HelpRequest> findPublishedProposedHelpRequestsByTeacherId(int id, boolean published); 

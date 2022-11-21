@@ -17,5 +17,6 @@ teacher.help-request.form.label.school = Nombre de la escuela del aprendiz
 teacher.help-request.form.label.teacher-link = Enlace de información del aprendiz
 teacher.help-request.form.label.statement = Declaración del aprendiz
 
-master.menu.learner.create-follow-ups = Crear seguimiento
+teacher.follow-up.button.create = Crear seguimiento
 teacher.help-request.form.button.update = Actualizar estado
+teacher.help-request.form.button.follow-up = Lista de seguimientos

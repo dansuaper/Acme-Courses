@@ -27,11 +27,12 @@ public class TeacherHelpRequestListService implements AbstractListService<Teache
 	@Override
 	public Collection<HelpRequest> findMany(final Request<HelpRequest> request) {
 		assert request != null;
-		
+
 		final Collection<HelpRequest> result;
 		final int UAId = request.getPrincipal().getAccountId();
 		final int teacherId = this.repository.findTeacherByUserAccountId(UAId).getId();
-		result = this.repository.findPublishedAcceptedOrDeniedHelpRequestsByTeacherId(teacherId, true);
+		result = this.repository.findPublishedHelpRequestsByTeacherId(teacherId);
+		
 		return result;
 	}
  

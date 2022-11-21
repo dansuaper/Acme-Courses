@@ -17,5 +17,6 @@ teacher.help-request.form.label.school = Learner's school
 teacher.help-request.form.label.teacher-link = Learner's info link
 teacher.help-request.form.label.statement = Learner's statement
 
-master.menu.learner.create-follow-ups = Create follow up
+teacher.follow-up.button.create = Create follow up
 teacher.help-request.form.button.update = Update status
+teacher.help-request.form.button.follow-up = Follow ups

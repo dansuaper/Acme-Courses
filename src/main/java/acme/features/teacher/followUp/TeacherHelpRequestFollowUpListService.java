@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.followUps.FollowUp;
+import acme.entities.helpRequests.HelpRequest;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
@@ -18,9 +19,17 @@ public class TeacherHelpRequestFollowUpListService implements AbstractListServic
  
 	@Override 
 	public boolean authorise(final Request<FollowUp> request) { 
-		assert request != null; 
-		
-		return true; 
+		assert request != null;
+
+		boolean result;
+		int masterId;
+		HelpRequest helpRequest;
+
+		masterId = request.getModel().getInteger("id");
+		helpRequest = this.repository.findOneHelpRequestById(masterId);
+		result = (helpRequest != null && helpRequest.isPublished() && request.isPrincipal(helpRequest.getTeacher()));
+
+		return result;
 	} 
  
 	@Override 
