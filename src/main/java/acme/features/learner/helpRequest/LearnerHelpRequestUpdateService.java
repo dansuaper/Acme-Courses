@@ -77,21 +77,21 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 		
 		if (!errors.hasErrors("ticker")) {
 			final HelpRequest h = this.repository.findOneHelpRequestByTicker(entity.getTicker());
-			errors.state(request, h == null || h.getId() == entity.getId(), "ticker", "teacher.help-request.form.error.duplicated");
+			errors.state(request, h == null || h.getId() == entity.getId(), "ticker", "learner.help-request.form.error.duplicated");
 		}
 		
 		if(entity.getTeacher() == null) {
-            errors.state(request, entity.getTeacher() != null, "teacherId", "teacher.help-request.form.error.no-teacher");
+            errors.state(request, entity.getTeacher() != null, "teacherId", "learner.help-request.form.error.no-teacher");
         }
 		
 		if(!errors.hasErrors("startDate")) {
 			final Date startDate = DateUtils.addMonths(new Date(System.currentTimeMillis() - 1), 1);
-			errors.state(request, entity.getStartDate().after(startDate), "startDate", "teacher.help-request.form.error.start-date");
+			errors.state(request, entity.getStartDate().after(startDate), "startDate", "learner.help-request.form.error.start-date");
 		}
 		
 		if(!errors.hasErrors("endDate") && !errors.hasErrors("startDate")) {
 			final Date endDate = DateUtils.addMonths(entity.getStartDate(), 1);
-			errors.state(request,entity.getEndDate().after(endDate), "endDate", "teacher.help-request.form.error.one-month");
+			errors.state(request,entity.getEndDate().after(endDate), "endDate", "learner.help-request.form.error.one-month");
 		}
 		
 		if (!errors.hasErrors("budget")) {
@@ -103,8 +103,8 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
                     accepted = true;
                 }
             }
-			errors.state(request, accepted, "budget", "teacher.help-request.form.error.currency");
-			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "teacher.help-request.form.error.amount");
+			errors.state(request, accepted, "budget", "learner.help-request.form.error.currency");
+			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "learner.help-request.form.error.amount");
 		}
 	}
 
@@ -113,7 +113,7 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 		assert request != null;
 		assert entity != null;
 		
-		entity.setTeacher(this.repository.findTeacherById(Integer.valueOf(request.getModel().getAttribute("teacherId").toString())));
+		entity.setTeacher(this.repository.findTeacherById(entity.getTeacher().getId()));
 		entity.setPublished(false);
 		
 		this.repository.save(entity);

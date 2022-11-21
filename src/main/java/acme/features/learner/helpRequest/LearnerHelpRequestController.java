@@ -36,7 +36,7 @@ public class LearnerHelpRequestController extends AbstractController<Learner, He
 		super.addCommand("list", this.listRecentService); 
 		super.addCommand("create", this.createService);
 		super.addCommand("delete", this.deleteService); 
-		super.addCommand("publish", this.publishService); 
+		super.addCommand("publish", "update", this.publishService); 
 		super.addCommand("update", this.updateService);
 	} 
  
