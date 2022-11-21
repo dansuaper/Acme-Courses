@@ -8,6 +8,10 @@ import java.util.Map;
 import acme.entities.systemConfiguration.SystemConfiguration;
 
 public class SpamDetector {
+	
+	private SpamDetector() {
+		
+	}
 
 	public static Boolean isSpam(final String text, final SystemConfiguration systemConfiguration) {
 		boolean result = false;
@@ -40,7 +44,7 @@ public class SpamDetector {
 	}
 
 	private static List<String> getWords(final String originalText){
-		return Arrays.asList(originalText.replaceAll("[.,:;/*=|()�!�?{}`�<>]"," ").replace("\""," ").replace("\\"," ")
+		return Arrays.asList(originalText.replaceAll("[.,:;/*=|()¡!¿?{}`´<>]"," ").replace("\""," ").replace("\\"," ")
 			.trim().split("\\s+"));		
 	}
 	
