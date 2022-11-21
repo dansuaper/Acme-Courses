@@ -44,6 +44,7 @@
 	<jstl:if test="${status == 'ACCEPTED' && published == true}">
 		<acme:button code="learner.help-request.follow-up.button.create" action="/learner/follow-up/create?masterId=${id}" />
 	</jstl:if>
-	<acme:button code="learner.help-request.form.button.follow-up" action="/learner/follow-up/listFollowUp?id=${id}"/>
-	
+	<jstl:if test="${command != 'create'}">
+		<acme:button code="learner.help-request.form.button.follow-up" action="/learner/follow-up/listFollowUp?id=${id}"/>	
+	</jstl:if>
 </acme:form>
