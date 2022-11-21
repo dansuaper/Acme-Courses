@@ -13,14 +13,14 @@
 		<jstl:if test="${differentCurrency == true}">
 			<acme:input-money code="learner.help-request.form.label.convertir" path="convertir" readonly="true"/>
 		</jstl:if>
-	<acme:input-textbox code="learner.help-request.form.label.status" path="status" readonly="true"/>
+		<acme:input-textbox code="learner.help-request.form.label.status" path="status" readonly="true"/>
 	</jstl:if>
 	<acme:input-textbox code="learner.help-request.form.label.info" path="info"/>
 	<jstl:if test="${published == true}">
-	<acme:input-textbox code="learner.help-request.form.label.teacher-username" path="teacher.userAccount.username"/>
-	<acme:input-textbox code="learner.help-request.form.label.teacher-school" path="teacher.school"/>
-	<acme:input-textbox code="learner.help-request.form.label.teacher-info" path="teacher.info"/>
-	<acme:input-textbox code="learner.help-request.form.label.teacher-statement" path="teacher.statement"/>
+		<acme:input-textbox code="learner.help-request.form.label.teacher-username" path="teacher.userAccount.username"/>
+		<acme:input-textbox code="learner.help-request.form.label.teacher-school" path="teacher.school"/>
+		<acme:input-textbox code="learner.help-request.form.label.teacher-info" path="teacher.info"/>
+		<acme:input-textbox code="learner.help-request.form.label.teacher-statement" path="teacher.statement"/>
 	</jstl:if>
 	<jstl:choose>
 		<jstl:when test="${command == 'create'}">
@@ -32,7 +32,7 @@
 		</jstl:when>
 	</jstl:choose>
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command,'show, update, delete, publish') && published == false}">
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && published == false}">
 			<acme:submit code="learner.help-request.form.button.update" action="/learner/help-request/update"/> 
 			<acme:submit code="learner.help-request.form.button.delete" action="/learner/help-request/delete"/>
 			<acme:submit code="learner.help-request.form.button.publish" action="/learner/help-request/publish"/>

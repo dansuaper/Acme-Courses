@@ -52,8 +52,8 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 		
 		request.unbind(entity, model, "ticker", "statement", "budget", "startDate", "endDate", "info", "published",
 			"status", "teacher.userAccount.username", "teacher.school", "teacher.info", "teacher.statement");
-		model.setAttribute("inventors", this.repository.findManyTeachers());
-		model.setAttribute("inventorId", entity.getTeacher().getId());
+		model.setAttribute("teachers", this.repository.findManyTeachers());
+		model.setAttribute("teacherId", entity.getTeacher().getId());
 	}
 
 	@Override

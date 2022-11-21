@@ -44,6 +44,6 @@ public class TeacherCourseListMineService implements AbstractListService<Teacher
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "caption", "link", "cost");
+		request.unbind(entity, model, "ticker", "caption", "link", "cost", "teacher.userAccount.username");
 	}
 }

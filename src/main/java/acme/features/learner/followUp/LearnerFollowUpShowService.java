@@ -53,8 +53,6 @@ public class LearnerFollowUpShowService implements AbstractShowService<Learner, 
 		assert model != null; 
 		 
 		request.unbind(entity, model, "instantiationMoment","sequenceNumber", "message", "info");	 
-		model.setAttribute("confirmation", false); 
-		model.setAttribute("readonly", true); 
 	} 
  
 } 
