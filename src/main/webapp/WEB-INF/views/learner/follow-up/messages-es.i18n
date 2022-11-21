@@ -8,4 +8,4 @@ learner.followUp.form.label.message = Mensaje
 learner.followUp.form.label.info = Enlace de información
 learner.followUp.form.label.confirmation = Confirmación
 learner.followUp.list.button.create = Crear 
-learner.followUp.confirmation.error. = Debes confirmar
+learner.followUp.confirmation.error = Debes confirmar

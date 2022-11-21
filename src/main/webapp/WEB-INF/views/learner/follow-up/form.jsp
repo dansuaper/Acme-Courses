@@ -25,5 +25,5 @@
 	<jstl:if test="${command == 'create'}">
 		<acme:input-checkbox code="learner.followUp.form.label.confirmation" path="confirmation"/>
 	</jstl:if>
-	<acme:submit test="${command == 'create' && status == 'ACCEPTED'}" code="learner.followUp.list.button.create" action="/learner/follow-up/create?helpRequestId=${helpRequestId}"/>
+	<acme:submit test="${command == 'create' && status == 'ACCEPTED'}" code="learner.followUp.list.button.create" action="/learner/follow-up/create?masterId=${masterId}"/>
 </acme:form>

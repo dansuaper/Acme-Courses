@@ -24,3 +24,4 @@ learner.help-request.form.button.delete = Delete
 learner.help-request.form.button.publish = Publish
 learner.help-request.form.button.update = Update
 learner.help-request.list.create = Create
+learner.help-request.follow-up.button.create = Create follow up

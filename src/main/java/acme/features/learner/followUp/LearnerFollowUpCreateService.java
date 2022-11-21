@@ -28,7 +28,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		int masterId;
 		HelpRequest helpRequest;
 
-		masterId = request.getModel().getInteger("id");
+		masterId = request.getModel().getInteger("masterId");
 		helpRequest = this.repository.findOneHelpRequestById(masterId);
 		result = (helpRequest != null && helpRequest.isPublished() && request.isPrincipal(helpRequest.getLearner()));
 
@@ -55,7 +55,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		model.setAttribute("status", entity.getHelpRequest().getStatus());
 		model.setAttribute("masterId", entity.getHelpRequest().getId());
 		
-		request.unbind(entity, model, "instantationMoment", "sequenceNumber", "message", "info");	
+		request.unbind(entity, model, "instantiationMoment", "sequenceNumber", "message", "info");	
 	}
 
 	@Override
