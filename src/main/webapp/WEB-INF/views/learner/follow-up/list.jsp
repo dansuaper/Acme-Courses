@@ -7,4 +7,5 @@
 	<acme:list-column code="learner.followUp.list.label.sequenceNumber" path="sequenceNumber"/> 
 	<acme:list-column code="learner.followUp.list.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:list-column code="learner.followUp.list.label.info" path="info"/>
-</acme:list>                                                                                               
+</acme:list>                 
+                                                                           

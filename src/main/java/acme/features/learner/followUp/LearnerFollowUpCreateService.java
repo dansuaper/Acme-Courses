@@ -28,7 +28,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		int masterId;
 		HelpRequest helpRequest;
 
-		masterId = request.getModel().getInteger("masterId");
+		masterId = request.getModel().getInteger("id");
 		helpRequest = this.repository.findOneHelpRequestById(masterId);
 		result = (helpRequest != null && helpRequest.isPublished() && request.isPrincipal(helpRequest.getLearner()));
 
