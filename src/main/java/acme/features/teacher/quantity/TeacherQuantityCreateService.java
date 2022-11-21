@@ -22,11 +22,11 @@ public class TeacherQuantityCreateService implements AbstractCreateService<Teach
 	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
 		
-		int quantityId;
+		int courseId;
 		boolean result;
 		
-		quantityId = request.getModel().getInteger("id");
-		final Course course = this.repository.findCourseByQuantityId(quantityId);
+		courseId = request.getModel().getInteger("id");
+		final Course course = this.repository.findOneCourseById(courseId);
 		result = course != null && (course.isPublished() || request.isPrincipal(course.getTeacher()));
 		
 		return result;
@@ -41,7 +41,6 @@ public class TeacherQuantityCreateService implements AbstractCreateService<Teach
 		if(this.repository.findAssignableTutorials(entity.getCourse().getId()).isEmpty()) {
 			request.bind(entity, errors, "amount", "timeUnit");
 		} else {
-			
 			entity.setTutorial(this.repository.findTutorialById(Integer.valueOf(request.getModel().getAttribute("tutorialId").toString())));
 			request.bind(entity, errors, "amount", "timeUnit", "tutorialId");
 		}

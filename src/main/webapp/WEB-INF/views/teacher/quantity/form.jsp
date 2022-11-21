@@ -15,19 +15,19 @@
 			<acme:input-money code="teacher.tutorial.form.label.convertir" path="convertir" readonly="true"/>
 		</jstl:if>
 		<acme:input-textbox code="teacher.course.form.label.ticker" path="course.ticker" readonly="true"/>
-		</jstl:if>		
-			<jstl:if test="${coursePublished == false}">
-				<acme:submit code="teacher.quantity.form.button.update" action="/teacher/quantity/update" />
-				<acme:submit code="teacher.quantity.form.button.delete" action="/teacher/quantity/delete" />
-			</jstl:if>
-		<jstl:if test="${command == 'create'}">
-			<acme:input-integer code="teacher.quantity.form.label.amount" path="amount"/>
-			<acme:input-textbox code="teacher.quantity.form.label.time-unit" path="timeUnit"/>
-			<acme:input-select code="teacher.quantity.form.label.tutorial" path="tutorialId">
-				<jstl:forEach items="${tutorials}" var="tutorial">
-					<acme:input-option code="${tutorial.getTitle()}" value="${tutorial.getId()}" selected="${tutorial.getId() == tutorialId}" />
-				</jstl:forEach>
-			</acme:input-select>
-			<acme:submit code="tutorial.quantity.form.button.create" action="/tutorial/quantity/create?masterId=${masterId}" />
-		</jstl:if>
+	</jstl:if>		
+	<jstl:if test="${published == false}">
+		<acme:submit code="teacher.quantity.form.button.update" action="/teacher/quantity/update" />
+		<acme:submit code="teacher.quantity.form.button.delete" action="/teacher/quantity/delete" />
+	</jstl:if>
+	<jstl:if test="${command == 'create'}">
+		<acme:input-integer code="teacher.quantity.form.label.amount" path="amount"/>
+		<acme:input-textbox code="teacher.quantity.form.label.time-unit" path="timeUnit"/>
+		<acme:input-select code="teacher.quantity.form.label.tutorial" path="tutorialId">
+			<jstl:forEach items="${tutorials}" var="tutorial">
+				<acme:input-option code="${tutorial.getTitle()}" value="${tutorial.getId()}" selected="${tutorial.getId() == tutorialId}" />
+			</jstl:forEach>
+		</acme:input-select>
+		<acme:submit code="teacher.quantity.form.button.create" action="/teacher/quantity/create?id=${masterId}" />
+	</jstl:if>
 </acme:form>

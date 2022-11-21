@@ -1,5 +1,6 @@
 package acme.features.teacher.quantity;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,7 @@ public class TeacherQuantityShowService implements AbstractShowService<Teacher, 
 		assert entity != null;
 		assert model != null;
 		
-		model.setAttribute("published", entity.getTutorial().isPublished());
+		model.setAttribute("published", entity.getCourse().isPublished());
 		final boolean differentCurrency = !entity.getTutorial().getCost().getCurrency().equals(this.repository.findSystemCurrency());
 		model.setAttribute("differentCurrency", differentCurrency);
 		model.setAttribute("conversion", this.convertir(entity.getTutorial().getCost()).getTarget());
@@ -83,24 +84,24 @@ public class TeacherQuantityShowService implements AbstractShowService<Teacher, 
 		return m;
 	}
 	
-//	public Money price(final int courseId) {
-//		final Money result = new Money();
-//		result.setAmount(0.);
-//		result.setCurrency(this.repository.findSystemCurrency());
-//		final Collection<Quantity> quantities = this.repository.findQuantityByCourseId(courseId);
-//				
-//		for(final Quantity q: quantities) {
-//				final Double c;
-//				final Money money = q.getTutorial().getCost();
-//				final double number = q.getAmount();
-//				
-//				c = this.convertir(money).getTarget().getAmount();
-//				
-//				final Double newAmount = Math.round((result.getAmount() + c * number) * 100)/100.0;
-//				result.setAmount(newAmount);
-//		}
-//		
-//		return result;
-//	}
+	public Money price(final int courseId) {
+		final Money result = new Money();
+		result.setAmount(0.);
+		result.setCurrency(this.repository.findSystemCurrency());
+		final Collection<Quantity> quantities = this.repository.findQuantityByCourseId(courseId);
+				
+		for(final Quantity q: quantities) {
+				final Double c;
+				final Money money = q.getTutorial().getCost();
+				final double number = q.getAmount();
+				
+				c = this.convertir(money).getTarget().getAmount();
+				
+				final Double newAmount = Math.round((result.getAmount() + c * number) * 100)/100.0;
+				result.setAmount(newAmount);
+		}
+		
+		return result;
+	}
 
 }

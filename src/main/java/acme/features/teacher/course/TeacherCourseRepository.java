@@ -2,7 +2,6 @@ package acme.features.teacher.course;
 
 import java.util.Collection;
 
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -37,9 +36,6 @@ public interface TeacherCourseRepository extends AbstractRepository{
 	@Query("select m from MoneyExchange m where m.source.currency = :currency and m.source.amount = :amount and m.target.currency = :systemCurrency")
 	MoneyExchange findMoneyExchange(String currency, Double amount, String systemCurrency);
 	
-//	@Query("select count (q.element) from Quantity q where q.element.type = acme.entities.elements.ElementType.INGREDIENT and q.recipe.id = :recipeId")
-//	Integer findNumIngredientsOfRecipe(int courseId);
-	
 	@Query("select q from Quantity q where q.id = :id")
 	Quantity findOneQuantityById(int id);
 	
@@ -53,5 +49,5 @@ public interface TeacherCourseRepository extends AbstractRepository{
 	Tutorial findTutorialById(int id);
 	
 	@Query("select t from Tutorial t where t.published = true and t not in (select q.tutorial from Quantity q where q.course.id = :courseId)")
-	Collection<Item> findAssignableTutorials(int courseId);
+	Collection<Tutorial> findAssignableTutorials(int courseId);
 }

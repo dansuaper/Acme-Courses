@@ -1,5 +1,5 @@
 teacher.quantity.list.label.type = Tipo
-teacher.quantity.list.label.caption = Título
+teacher.quantity.list.label.ticker = Código
 teacher.quantity.list.label.cost = Coste
 teacher.quantity.list.label.amount = Cantidad
 teacher.quantity.list.label.time-unit = Unidad de tiempo

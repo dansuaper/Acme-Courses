@@ -24,6 +24,7 @@ public class Quantity extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 	
+	@NotNull
 	@Min(value = 1)
 	protected Double amount;
 	
