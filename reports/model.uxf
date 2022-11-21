@@ -361,15 +361,15 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>522</x>
+      <x>510</x>
       <y>624</y>
-      <w>126</w>
+      <w>144</w>
       <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Quantity
 --
-+ quantity: double (Min(1))
++ quantity: double (Min(1), NotNull)
 + timeUnit: String {NotBlank}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -440,8 +440,8 @@ HelpRequest
 + ticker: String {NotBlank, Pattern(^[A-Z]{3}-[0-9]{3}(:[A-Z]{1,10})?$), Unique}
 + statement: String {NotBlank, Length(1, 255)}
 + budget: Money {Positive}
-+ startDate: Date
-+ endDate: Date
++ startDate: Date {NotNull, Temporal(TIMESTAMP)}
++ endDate: Date {NotNull, Temporal(TIMESTAMP)}
 + info: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -578,27 +578,27 @@ Belongs to ^</panel_attributes>
     <coordinates>
       <x>438</x>
       <y>642</y>
-      <w>96</w>
+      <w>84</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=0..*
 m2=1
 &lt; has </panel_attributes>
-    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>642</x>
+      <x>648</x>
       <y>642</y>
-      <w>90</w>
+      <w>84</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=0..*
 m2=1
 &lt; has </panel_attributes>
-    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
 </diagram>

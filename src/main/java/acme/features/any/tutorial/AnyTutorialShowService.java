@@ -47,35 +47,6 @@ public class AnyTutorialShowService implements AbstractShowService<Any, Tutorial
 		return result;
 	}
 
-//	public MoneyExchange conversion(final Money money) {
-//
-//		final AuthenticatedMoneyExchangePerformService moneyExchange = new AuthenticatedMoneyExchangePerformService();
-//
-//		MoneyExchange conversion = new MoneyExchange();
-//
-//		final String systemCurrency = this.repository.findSystemCurrency();
-//
-//		if(!money.getCurrency().equals(systemCurrency)) {
-//			conversion = this.repository.findMoneyExchangeByCurrencyAndAmount(money.getCurrency(), money.getAmount(),systemCurrency);
-//
-//			if(conversion == null) {
-//				conversion = moneyExchange.computeMoneyExchange(money, systemCurrency);
-//				this.repository.save(conversion);
-//
-//			}
-//
-//		}else {
-//			conversion.setSource(money);
-//			conversion.setTarget(money);
-//			conversion.setCurrencyTarget(systemCurrency);
-//			conversion.setDate(new Date(System.currentTimeMillis()));
-//
-//		}
-//
-//		return conversion;
-//
-//	}
-
 	@Override
 	public void unbind(final Request<Tutorial> request, final Tutorial entity, final Model model) {
 		assert request != null;
